@@ -22,7 +22,7 @@
 //  .constant('moment', moment);
 
 angular
-  .module('public', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'mgcrea.ngStrap']).
+  .module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'mgcrea.ngStrap']).
   controller('MainController', ["$scope", "$http", function ($scope, $http) {
 
     $scope.form = {
@@ -31,13 +31,13 @@ angular
 
     $scope.submit = function (form, isValid) {
       if (isValid) {
-        $http.post("api/registration", {form: form}).then(
-          function (response) {
-            if (response.status === 200) {
-              console.info("form submit successful");
-            }
-          }
-        );
+        $http.
+          post("api/registration", {form: form}).
+          then(function (response) {
+            console.info("form submit successful");
+          }).catch(function (err) {
+            console.log(err);
+          });
       }
     };
 
