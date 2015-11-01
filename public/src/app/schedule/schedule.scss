@@ -1,0 +1,43 @@
+.schedule {
+  margin: 20px auto;
+  width: 80%;
+  .item {
+    width: 100%;
+    height: 50px;
+    background-color: #006666;
+    line-height: 49px;
+
+    .icon {
+      text-align: center;
+    }
+
+    .color1 {
+      background-color: #006666;
+    }
+    .color2 {
+      background-color: #006666;
+    }
+    .color3 {
+      background-color: #006666;
+    }
+    .color4 {
+      background-color: #006666;
+    }
+    .color5 {
+      background-color: #006666;
+    }
+    .color6 {
+      background-color: #006666;
+    }
+  }
+}
+
+schedule:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+schedule:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
