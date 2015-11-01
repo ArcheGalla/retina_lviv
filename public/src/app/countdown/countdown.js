@@ -1,9 +1,16 @@
 angular.module("app").directive("countdown", function () {
   return {
     restrict: "E",
-    templateUrl: "",
+    replace: true,
+    templateUrl: "app/countdown/countdown.html",
     link: function ($scope, element, attrs) {
-      console.log("i am count down");
+
+      var start = Date.now();
+      var end = new Date(15, 4, 2, 9, 0);
+
+      $(".countdown").final_countdown({},function () {
+          console.log("finish call back");
+      });
     }
   }
 });
