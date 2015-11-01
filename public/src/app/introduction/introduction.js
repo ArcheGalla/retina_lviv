@@ -3,7 +3,6 @@ angular.module("app").directive("introduction", [function () {
     restrict: "E",
     templateUrl: "app/introduction/introduction.html",
     link: function ($scope, element, attrs) {
-      console.log(" i am introduction directive ");
     }
   }
 }]);
