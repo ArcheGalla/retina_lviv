@@ -679,69 +679,71 @@ section h3.section-subheading {
 aside.clients img {
   margin: 50px auto;
 }
-
-section#contact {
+//----------------------------------------------------------------------
+//                      registration
+//----------------------------------------------------------------------
+section#registration {
   background-color: #222;
   background-image: url(../assets/images/map-image.png);
   background-position: center;
   background-repeat: no-repeat;
 }
 
-section#contact .section-heading {
+section#registration .section-heading {
   color: #fff;
 }
 
-section#contact .form-group {
+section#registration .form-group {
   margin-bottom: 25px;
 }
 
-section#contact .form-group input,
-section#contact .form-group textarea {
+section#registration .form-group input,
+section#registration .form-group textarea {
   padding: 20px;
 }
 
-section#contact .form-group input.form-control {
+section#registration .form-group input.form-control {
   height: auto;
 }
 
-section#contact .form-group textarea.form-control {
+section#registration .form-group textarea.form-control {
   height: 319px;
 }
 
-section#contact .form-control:focus {
+section#registration .form-control:focus {
   border-color: #fed136;
   box-shadow: none;
 }
 
-section#contact::-webkit-input-placeholder {
+section#registration::-webkit-input-placeholder {
   text-transform: uppercase;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #bbb;
 }
 
-section#contact:-moz-placeholder {
+section#registration:-moz-placeholder {
   text-transform: uppercase;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #bbb;
 }
 
-section#contact::-moz-placeholder {
+section#registration::-moz-placeholder {
   text-transform: uppercase;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #bbb;
 }
 
-section#contact:-ms-input-placeholder {
+section#registration:-ms-input-placeholder {
   text-transform: uppercase;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #bbb;
 }
 
-section#contact .text-danger {
+section#registration .text-danger {
   color: #e74c3c;
 }
 
