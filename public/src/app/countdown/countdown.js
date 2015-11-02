@@ -5,14 +5,14 @@ angular.module("app").directive("countdown", function () {
     templateUrl: "app/countdown/countdown.html",
     link: function ($scope, element, attrs) {
 
-      var start = new Date();
-      var end = new Date("April 4, 2015 9:00:00").getMilliseconds();
+      var end = Math.floor((new Date("02/04/2016")).getTime() / 1000);
+      var start = Math.floor((new Date("4/11/2015")).getTime() / 1000);
+      var now = Math.floor((new Date).getTime() / 1000);
 
-      //todo : don't work with init venues
       $(".countdown").final_countdown({
-        //start: start,
-        //end: end,
-        // now: Date now()
+        'start': start,
+        'end': end,
+        'now': now
       }, function () {
         console.log("finish call back");
       });
