@@ -35,7 +35,7 @@ $icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bo
 
 body {
   overflow-x: hidden;
-  font-family:  "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .text-muted {
@@ -287,6 +287,12 @@ fieldset[disabled] .btn-xl.active {
 
   .navbar-default.navbar-shrink .navbar-brand {
     font-size: 1.5em;
+  }
+}
+
+nav {
+  .text-bold {
+    font-weight: bold;
   }
 }
 
@@ -679,6 +685,7 @@ section h3.section-subheading {
 aside.clients img {
   margin: 50px auto;
 }
+
 //----------------------------------------------------------------------
 //                      registration
 //----------------------------------------------------------------------

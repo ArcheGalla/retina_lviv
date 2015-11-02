@@ -1,10 +1,24 @@
 .speaker-wrap {
+
   .img-speaker {
     display: block;
-    width: 350px;
+    width: 360px;
     height: auto;
-    margin: 0 auto 40px auto;
+    margin: 34px auto 40px auto;
   }
   @media screen and (min-width: 480px) {
+  }
+}
+
+.intro-text {
+  h3 {
+    margin-top: 40px;
+  }
+  p {
+    line-height: 1.4;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 1.8rem;
   }
 }
