@@ -5,19 +5,22 @@
     </div>
   </div>
   <div class="schedule">
-    <div class="item" ng-repeat="item in schedule">
+    <div class="item"
+         ng-repeat="item in schedule"
+         style="background-color: {{item.bg_color}};
+         color: {{item.font_color}}">
       <div class="row">
         <div class="col-lg-2 icon">
           <i class="fa {{ item.icon}}"></i>
         </div>
         <div class="col-lg-7 text-uppercase">{{ item.text}}</div>
-        <div class="col-lg-3">{{item.time.star}} - {{item.time.end}}</div>
+        <div class="col-lg-3">{{item.time}}</div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 text-center">
-      <p class="large text-muted">  </p>
+      <p class="large text-muted"></p>
     </div>
   </div>
 </div>
