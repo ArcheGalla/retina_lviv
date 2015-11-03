@@ -1,6 +1,6 @@
 angular
-  .module('app', ['ngAnimate']).
-  controller('MainController', ["$scope", "$http", function ($scope, $http) {
+  .module("app", ["ngAnimate", "ngMask"]).
+  controller("MainController", ["$scope", "$http", function ($scope, $http) {
 
   }]);
 

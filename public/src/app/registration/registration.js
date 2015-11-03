@@ -8,7 +8,7 @@ angular.module("app").directive("registration", ["Registration", function (Regis
         name: "",
         sname: "",
         email: "",
-        phone: null,
+        phone: undefined,
         message: ""
       };
 
