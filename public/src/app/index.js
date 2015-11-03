@@ -1,10 +1,5 @@
 angular
-  .module('app', [
-    'ngAnimate',
-    'ngCookies',
-    'ngTouch',
-    'ngSanitize',
-    'mgcrea.ngStrap']).
+  .module('app', ['ngAnimate']).
   controller('MainController', ["$scope", "$http", function ($scope, $http) {
 
   }]);

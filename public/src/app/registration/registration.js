@@ -1,4 +1,4 @@
-angular.module("app").directive("registration", [function () {
+angular.module("app").directive("registration", ["Registration", function (Registration) {
   return {
     restrict: "E",
     templateUrl: "app/registration/registration.html",
@@ -15,18 +15,23 @@ angular.module("app").directive("registration", [function () {
       $scope.submit = function (form, isValid) {
         console.log(form);
         if (isValid) {
-          console.log(form);
-          //$http.
-          //  post("api/registration", {form: form}).
-          //  then(function (response) {
-          //    console.info("form submit successful");
-          //  }).catch(function (err) {
-          //    console.log(err);
-          //  });
+          Registration($scope.form).then(function () {
+            console.info("success");
+          }).catch(function (err) {
+            console.log(err);
+          });
         }
       };
 
 
     }
+  }
+}]);
+
+angular.module("app").factory("Registration", ["$http", function ($http) {
+  return function (param) {
+    return $http.post("api/registration", param).then(function (response) {
+      return response.data
+    })
   }
 }]);
