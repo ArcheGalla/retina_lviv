@@ -7,15 +7,15 @@ angular.module("app").directive("schedule", [function () {
         {
           icon: "fa-pencil-square-o",
           text: "Реєстрація",
-          bg_color: "#e7b300",
+          bg_color: "#ffdd6a",
           font_color: "#fff",
           time: "9:00"
         },
         {
           icon: "fa-university",
           text: "Відкриття симпозіуму",
-          bg_color: "#fec503",
-          font_color: "#fff",
+          bg_color: "#fff",
+          font_color: "#fec503",
           time: "9:45"
         },
         {
@@ -76,15 +76,15 @@ angular.module("app").directive("schedule", [function () {
         {
           icon: "fa-university",
           text: "Закриття симпозіуму",
-          bg_color: "#fec503",
-          font_color: "#fff",
+          bg_color: "#fff",
+          font_color: "#fec503",
           time: "18:30-18:45"
         }
         ,
         {
           icon: "fa-glass",
           text: "Вечеря",
-          bg_color: "#e7b300",
+          bg_color: "#ffdd6a",
           font_color: "#fff",
           time: "20:00"
         }

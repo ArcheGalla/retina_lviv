@@ -5,8 +5,8 @@ angular.module("app").directive("countdown", function () {
     templateUrl: "app/countdown/countdown.html",
     link: function ($scope, element, attrs) {
 
-      var end = Math.floor((new Date("02/04/2016")).getTime() / 1000);
-      var start = Math.floor((new Date("4/11/2015")).getTime() / 1000);
+      var end = Math.floor((new Date("04/02/2016")).getTime() / 1000);
+      var start = Math.floor((new Date("9/04/2015")).getTime() / 1000);
       var now = Math.floor((new Date).getTime() / 1000);
 
       $(".countdown").final_countdown({

@@ -1,28 +1,44 @@
+$radius: 9px;
 .schedule {
+  border-radius: $radius;
   margin: 20px auto;
   width: 80%;
-  color: white;
   font-size: 1.4em;
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22),
   0 25px 55px 0 rgba(0, 0, 0, 0.21);
 
   .item {
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     line-height: 49px;
-
     .icon {
       text-align: center;
     }
   }
+
+  .item:first-child {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+  }
+
+  .item:last-child {
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+  @media screen and (min-width : 0) and (max-width : 480px) {
+    margin: 0;
+    width: 100%;
+    font-size: 1.4em;
+
+  }
+
 }
 
-schedule:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
+@media screen and (max-device-width: 480px) {
+  .schedule {
+    margin: 0;
+    width: 100%;
+    font-size: 1.4em;
 
-schedule:last-child {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  }
 }
