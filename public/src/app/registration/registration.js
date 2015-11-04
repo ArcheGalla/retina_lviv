@@ -4,6 +4,8 @@ angular.module("app").directive("registration", ["Registration", function (Regis
     templateUrl: "app/registration/registration.html",
     link: function ($scope, element, attrs) {
 
+      $scope.cartNumber = "7777-7777-7777-7777";
+      $scope.moneyOwner = "Don Joe";
       $scope.form = {
         name: "",
         sname: "",
