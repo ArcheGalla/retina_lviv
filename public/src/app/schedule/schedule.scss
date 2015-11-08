@@ -15,6 +15,9 @@ $radius: 9px;
       text-align: center;
     }
   }
+  .item:nth-child(odd) {
+    background: #ffdd6a;
+  }
 
   .item:first-child {
     border-top-left-radius: $radius;
