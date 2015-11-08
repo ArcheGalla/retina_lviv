@@ -13,8 +13,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
+app.get("/test", function (req, res) {
+  res.send("Hello World! ");
+});
 app.use('/', express.static(__dirname + '/public/dist/'));
 
-app.listen(3000,function () {
-    console.log("work on port 3000");
+
+var port = process.env.PORT || 3000;
+
+app.listen(port, function () {
+  console.log("work");
 });
