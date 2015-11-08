@@ -29,16 +29,22 @@ $radius: 9px;
     margin: 0;
     width: 100%;
     font-size: 1.4em;
-
-  }
-
-}
-
-@media screen and (max-device-width: 480px) {
-  .schedule {
-    margin: 0;
-    width: 100%;
-    font-size: 1.4em;
-
+    text-align: center;
+    .item {
+      min-height: 30px;
+      line-height: 30px;
+      .icon {
+        text-align: center;
+      }
+    }
   }
 }
+
+//@media screen and (max-device-width: 480px) {
+//  .schedule {
+//    margin: 0;
+//    width: 100%;
+//    font-size: 1.4em;
+//
+//  }
+//}

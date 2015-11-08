@@ -1,23 +1,100 @@
 <div class="container">
   <div class="row registration-text">
     <div class="col-lg-12 text-center conditions">
-      <h1 class="section-heading">Умови участі</h1>
-      <br/>
-      <br/>
-      <h5>Для участі у симпозіумі «РЕТІНА-ЛЬВІВ 2016» необхідно зробити разовий внесок у розмірі:</h5>
-      <br/>
+      <h1 class=" text-primary">Умови участі</h1>
+
+      <h2 class="text-left">Крок 1: Реєстрація</h2>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <!--<h1 class="text-uppercase text-center form-title">форма реєстрації</h1>-->
+          <br/>
+
+          <form name="register" id="contactForm" ng-submit="submit(form)" novalidate>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text"
+                         name="name"
+                         class="form-control"
+                         ng-model="form.name"
+                         placeholder="Ім’я" id="name" required>
+
+                  <p ng-if="register.name.$invalid && register.$submitted" class="help-block text-danger">Введіть
+                    ім’я</p>
+                </div>
+
+                <div class="form-group">
+                  <input type="text"
+                         name="sname"
+                         class="form-control"
+                         placeholder="Прізвище"
+                         ng-model="form.sname"
+                         required>
+
+                  <p ng-if="register.sname.$invalid && register.$submitted" class="help-block text-danger">Введіть
+                    прізвище</p>
+                </div>
+
+
+                <div class="form-group">
+                  <input type="email"
+                         name="email"
+                         class="form-control"
+                         placeholder="Електрона адреса"
+                         ng-model="form.email"
+                         required>
+
+                  <p ng-if="register.email.$invalid && register.$submitted" class="help-block text-danger">Введіть
+                    електронну адресу</p>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="form-control"
+                    ng-model="form.phone"
+                    mask="(999) 999-99-99"
+                    id="phone"
+                    placeholder="Телефон"
+                    required>
+
+                  <p ng-if="register.phone.$invalid && register.$submitted" class="help-block text-danger">Введіть номер
+                    телефону</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                <textarea class="form-control"
+                          placeholder="Ваше повідомлення"
+                          id="message"
+                          ng-model="form.message"
+                          required
+                          data-validation-required-message="Please enter a message."></textarea>
+
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+
+              <div class="col-lg-12 text-center">
+                <button type="submit" class="btn btn-xl">Зареєструватись</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <h2 class="text-left">Крок 2: Оплата участі</h2>
       <ul class="text-regist">
+        <br/>
         <li><i class="fa fa-ticket"></i> <strong>до 15 грудня 2015 – 300 грн</strong></li>
         <li><i class="fa fa-ticket"></i> <strong>до 15 лютого 2015 – 400 грн</strong></li>
         <li><i class="fa fa-ticket"></i> <strong>у день проведення – 450 грн</strong></li>
       </ul>
       <br/>
 
-      <h5>Для підтвердження своєї участі у симпозіумі Вам необхідно:</h5>
-      <br/>
-
-      <p class="text-regist">
-        Заповнити форму реєстрації, яка знаходиться нижче. <br/>
+      <p class="text-regist text-left">
         Зробити грошовий внесок, перерахувавши певну суму на рахунок <i class="fa fa-credit-card"></i>
         <strong> {{cartNumber}}</strong>, на ім’я {{ moneyOwner }}
       </p>
@@ -28,84 +105,37 @@
         симпозіумі «РЕТІНА-ЛЬВІВ 2016».
         <br/>
       </p>
+      <!------------------------------------------------------------------------------------------------>
+      <!--                    OLD                                                                     -->
+      <!------------------------------------------------------------------------------------------------>
+      <!--<br/>-->
+      <!--<br/>-->
+      <!--<h5>Для участі у симпозіумі «РЕТІНА-ЛЬВІВ 2016» необхідно зробити разовий внесок у розмірі:</h5>-->
+      <!--<br/>-->
+      <!--<ul class="text-regist">-->
+      <!--<li><i class="fa fa-ticket"></i> <strong>до 15 грудня 2015 – 300 грн</strong></li>-->
+      <!--<li><i class="fa fa-ticket"></i> <strong>до 15 лютого 2015 – 400 грн</strong></li>-->
+      <!--<li><i class="fa fa-ticket"></i> <strong>у день проведення – 450 грн</strong></li>-->
+      <!--</ul>-->
+      <!--<br/>-->
+
+      <!--<h5>Для підтвердження своєї участі у симпозіумі Вам необхідно:</h5>-->
+      <!--<br/>-->
+
+      <!--<p class="text-regist">-->
+      <!--Заповнити форму реєстрації, яка знаходиться нижче. <br/>-->
+      <!--Зробити грошовий внесок, перерахувавши певну суму на рахунок <i class="fa fa-credit-card"></i>-->
+      <!--<strong> {{cartNumber}}</strong>, на ім’я {{ moneyOwner }}-->
+      <!--</p>-->
+      <!--<br/>-->
+
+      <!--<p class="text-regist">-->
+      <!--Після виконання наданих пунктів з Вами зв’яжеться наш менеджер, для остаточного підтвердження Вашої участі у-->
+      <!--симпозіумі «РЕТІНА-ЛЬВІВ 2016».-->
+      <!--<br/>-->
+      <!--</p>-->
 
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="text-uppercase text-center form-title">форма реєстрації</h1>
 
-      <form name="register" id="contactForm" ng-submit="submit(form)" novalidate>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="text"
-                     name="name"
-                     class="form-control"
-                     ng-model="form.name"
-                     placeholder="Ім’я" id="name" required>
-
-              <p ng-if="register.name.$invalid && register.$submitted" class="help-block text-danger">Введіть ім’я</p>
-            </div>
-
-            <div class="form-group">
-              <input type="text"
-                     name="sname"
-                     class="form-control"
-                     placeholder="Прізвище"
-                     ng-model="form.sname"
-                     required>
-
-              <p ng-if="register.sname.$invalid && register.$submitted" class="help-block text-danger">Введіть
-                прізвище</p>
-            </div>
-
-
-            <div class="form-group">
-              <input type="email"
-                     name="email"
-                     class="form-control"
-                     placeholder="Електрона адреса"
-                     ng-model="form.email"
-                     required>
-
-              <p ng-if="register.email.$invalid && register.$submitted" class="help-block text-danger">Введіть
-                електронну адресу</p>
-            </div>
-            <div class="form-group">
-              <input
-                type="tel"
-                name="phone"
-                class="form-control"
-                ng-model="form.phone"
-                mask="(999) 999-99-99"
-                id="phone"
-                placeholder="Телефон"
-                required>
-
-              <p ng-if="register.phone.$invalid && register.$submitted" class="help-block text-danger">Введіть номер
-                телефону</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-                <textarea class="form-control"
-                          placeholder="Ваше повідомлення"
-                          id="message"
-                          ng-model="form.message"
-                          required
-                          data-validation-required-message="Please enter a message."></textarea>
-
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-
-          <div class="col-lg-12 text-center">
-            <button type="submit" class="btn btn-xl">Зареєструватись</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
 </div>
