@@ -20,7 +20,7 @@
                          ng-model="form.name"
                          placeholder="Ім’я" id="name" required>
 
-                  <p ng-if="register.name.$invalid && register.$submitted" class="help-block text-danger">Введіть
+                  <p ng-if="register.name.$invalid && register.$submitted && register.$untouched" class="help-block text-danger">Введіть
                     ім’я</p>
                 </div>
 
@@ -32,7 +32,7 @@
                          ng-model="form.sname"
                          required>
 
-                  <p ng-if="register.sname.$invalid && register.$submitted" class="help-block text-danger">Введіть
+                  <p ng-if="register.sname.$invalid && register.$submitted && register.$untouched" class="help-block text-danger">Введіть
                     прізвище</p>
                 </div>
 
@@ -45,7 +45,7 @@
                          ng-model="form.email"
                          required>
 
-                  <p ng-if="register.email.$invalid && register.$submitted" class="help-block text-danger">Введіть
+                  <p ng-if="register.email.$invalid && register.$submitted && register.$untouched" class="help-block text-danger">Введіть
                     електронну адресу</p>
                 </div>
                 <div class="form-group">
@@ -59,7 +59,7 @@
                     placeholder="Телефон"
                     required>
 
-                  <p ng-if="register.phone.$invalid && register.$submitted" class="help-block text-danger">Введіть номер
+                  <p ng-if="register.phone.$invalid && register.$submitted && register.$untouched" class="help-block text-danger">Введіть номер
                     телефону</p>
                 </div>
               </div>
@@ -69,18 +69,17 @@
                           placeholder="Ваше повідомлення"
                           id="message"
                           ng-model="form.message"
-                          required
-                          data-validation-required-message="Please enter a message."></textarea>
+                          required>
 
+                </textarea>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="clearfix"></div>
-
-              <p ng-if="registerSuccess" class="help-block text-danger">Реєстрація пройшла успішно !</p>
+              <!--<p ng-if="registerSuccess" class="help-block text-danger">Реєстрація пройшла успішно !</p>-->
 
               <div class="col-lg-12 text-center">
-                <button type="submit" class="btn btn-xl">Зареєструватись</button>
+                <button type="submit" class="btn btn-xl">{{btnText}}</button>
               </div>
             </div>
           </form>

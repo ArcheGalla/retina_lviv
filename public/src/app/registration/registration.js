@@ -1,5 +1,5 @@
-angular.module("app").directive("registration", ["Registration", "$timeout",
-  function (Registration, $timeout) {
+angular.module("app").directive("registration", ["$timeout", "$http",
+  function ($timeout, $http) {
     return {
       restrict: "E",
       templateUrl: "app/registration/registration.html",
@@ -7,7 +7,7 @@ angular.module("app").directive("registration", ["Registration", "$timeout",
 
         $scope.cartNumber = "7777-7777-7777-7777";
         $scope.moneyOwner = "Don Joe";
-        $scope.registerSuccess = false;
+        $scope.btnText = "Зареєструватись";
 
 
         $scope.form = {
@@ -19,46 +19,20 @@ angular.module("app").directive("registration", ["Registration", "$timeout",
         };
 
         $scope.submit = function (form, isValid) {
-          //console.log("before");
-          //$http.post("/register", JSON.stringify(form)).then(function (response) {
-          //  console.log("post");
-          //  console.log(response);
-          //});
-
-          //$http.get("/test").success(function (res) {
-          //    console.log(res);
-          //});
-
-          if (isValid) {
-            Registration(JSON.stringify(form)).then(function (data) {
-              if (data.status === 2000) {
-                $scope.form = {
-                  name: "",
-                  sname: "",
-                  email: "",
-                  phone: undefined,
-                  message: ""
-                };
-
-                $timeout(function () {
-                  $scope.registerSuccess = true;
-                }, 4000)
-              }
-            }).catch(function (err) {
-              console.log(err);
-            });
-          }
+          $http.post("/register", JSON.stringify(form)).then(function (response) {
+            if (response.status === 200) {
+              $scope.form = {
+                name: "",
+                sname: "",
+                email: "",
+                phone: undefined,
+                message: ""
+              };
+            }
+            $scope.btnText = "Ви зареєструвались";
+          });
         };
-
 
       }
     }
   }]);
-
-angular.module("app").factory("Registration", ["$http", function ($http) {
-  return function (param) {
-    return $http.post("/register", param).then(function (response) {
-      return response.data
-    })
-  }
-}]);
