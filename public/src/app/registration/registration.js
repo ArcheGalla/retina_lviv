@@ -5,8 +5,8 @@ angular.module("app").directive("registration", ["$timeout", "$http",
       templateUrl: "app/registration/registration.html",
       link: function ($scope, element, attrs) {
 
-        $scope.cartNumber = "7777-7777-7777-7777";
-        $scope.moneyOwner = "Don Joe";
+        $scope.cartNumber = " 5168 7423 5260 8263 ";
+        $scope.moneyOwner = " Ревич Андрій Васильович ";
         $scope.btnText = "Зареєструватись";
 
 
