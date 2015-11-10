@@ -38,7 +38,22 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).control
       ROAD_DATE_TEXT_2: ' empty ',
       ROAD_DATE_3: ' empty ',
       ROAD_DATE_TEXT_3: ' empty ',
-      DOWNLOAD_BTN: 'Downloads'
+      DOWNLOAD_BTN: 'Downloads',
+      SESSIONS: 'Themes sessions',
+      SESSION_TITLE_1: '',
+      SESSION_TEXT_1: '',
+
+      SESSION_TITLE_2: '',
+      SESSION_TEXT_2: '',
+
+      SESSION_TITLE_3: '',
+      SESSION_TEXT_3: '',
+
+      SESSION_TITLE_4: '',
+      SESSION_TEXT_4: '',
+
+      SESSION_TITLE_5: '',
+      SESSION_TEXT_5: '',
 
     })
     .translations('ua', {
@@ -70,6 +85,21 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).control
       ROAD_DATE_3: '1 березня 2016 року',
       ROAD_DATE_TEXT_3: 'буде сформована остаточна програма симпозіуму.',
       DOWNLOAD_BTN: 'Завантажити',
+      SESSIONS: 'Теми сесій',
+      SESSION_TITLE_1: 'Відшарування сітківки',
+      SESSION_TEXT_1: 'Стандартна процедура (газ чи силікон – покази, переваги, недоліки). Ускладнені випадки.',
+
+      SESSION_TITLE_2: 'Діабетична ретінопатія',
+      SESSION_TEXT_2: 'Покази до операції. Підготовка хворого до операції. Стандартна процедура. Видалення внутрішньої пограничної мембрани – переваги, недоліки.',
+
+      SESSION_TITLE_3: 'Макулярна дірка',
+      SESSION_TEXT_3: 'Довготривала макулярна дірка, особливості хірургії. Механізм дії видалення внутрішньої пограничної мембрани.',
+
+      SESSION_TITLE_4: 'Травма і вітрео-ретинальна хірургія',
+      SESSION_TEXT_4: 'Гемофтальм – покази до операції. Внутрішньоочне стороннє тіло – покази до трансвітреального видалення. Вивих кришталика, фіксація ІОЛ. Ендофтальміт, антибіотикотерапія, покази до закритої вітректомії.',
+
+      SESSION_TITLE_5: 'Ваша тема',
+      SESSION_TEXT_5: 'або окрема доповідь',
 
 
     });
