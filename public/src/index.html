@@ -26,7 +26,7 @@
   <!--<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">-->
   <!--<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>-->
   <!--<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'-->
-        <!--type='text/css'>-->
+  <!--type='text/css'>-->
   <!--<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>-->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -65,19 +65,22 @@
           <a href="#page-top"></a>
         </li>
         <li>
-          <a class="page-scroll text-bold" href="#session">Про симпозіум</a>
+          <a class="page-scroll text-bold" href="#session">{{ 'NAV_ABOUT' | translate }}</a>
         </li>
         <li>
-          <a class="page-scroll" href="#schedule">Розклад</a>
+          <a class="page-scroll" href="#schedule">{{ 'NAV_SCHEDULE' | translate }}</a>
         </li>
         <li>
-          <a class="page-scroll" href="#registration">Реєстрація</a>
+          <a class="page-scroll" href="#registration">{{ 'NAV_REGISTRATION' | translate }}</a>
         </li>
         <li>
-          <a class="page-scroll" href="#partners">Партнери</a>
+          <a class="page-scroll" href="#partners">{{ 'NAV_PARTNERS' | translate }}</a>
         </li>
         <li>
-          <a class="page-scroll" href="#contact">Контакти</a>
+          <a class="page-scroll" href="#contact">{{ 'NAV_CONTACTS' | translate }}</a>
+        </li>
+        <li>
+          <a class="page-scroll text-right" href="#contact">eng</a>
         </li>
       </ul>
     </div>
@@ -92,8 +95,11 @@
   <div class="container">
     <div class="intro-text">
       <div class="intro-heading text-shadow">Retina Lviv 2016</div>
-      <div class="intro-lead-in text-shadow">Всеукраїнський симпозіум офтальмологів</div>
-      <a href="#registration" class="page-scroll btn btn-xl">Реєстрація</a>
+      <div class="intro-lead-in text-shadow">
+        {{ 'MAIN_DESCRIPTION' | translate }}
+        </div>
+      <a href="#registration" class="page-scroll btn btn-xl">
+        {{ 'BTN_REGISTRATION' | translate }}</a>
     </div>
   </div>
 </header>
