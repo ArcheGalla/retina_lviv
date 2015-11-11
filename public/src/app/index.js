@@ -40,6 +40,7 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).control
       ROAD_DATE_TEXT_3: ' empty ',
       DOWNLOAD_BTN: 'Downloads',
       SESSIONS: 'Themes sessions',
+
       SESSION_TITLE_1: '',
       SESSION_TEXT_1: '',
 
@@ -54,6 +55,35 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).control
 
       SESSION_TITLE_5: '',
       SESSION_TEXT_5: '',
+
+      SCHEDULE: 'Розклад',
+      SCHEDULE_1: 'Registration',
+      SCHEDULE_2: 'Opening the symposium',
+      SCHEDULE_3: 'Ι session',
+      SCHEDULE_4: 'Coffee break',
+      SCHEDULE_5: 'ΙΙ session',
+      SCHEDULE_6: 'Lunch Break',
+      SCHEDULE_7: 'Lecture',
+      SCHEDULE_8: 'ΙΙΙ session',
+      SCHEDULE_9: 'Coffee break',
+      SCHEDULE_10: 'ΙV session',
+      SCHEDULE_11: 'Closing symposium',
+      SCHEDULE_12: 'Dinner',
+
+      REGISTRATION_CRITERIA: 'Conditions of participation',
+      REGISTRATION_STEP_1: 'Step 1: Register',
+      NAME_PLACEHOLDER: 'Name',
+      NAME_ERROR_MESSAGE: 'Enter your name',
+      SNAME_PLACEHOLDER: 'Surname',
+      SNAME_ERROR_MESSAGE: 'Enter your surname',
+      EMAIL_PLACEHOLDER: 'E-mail address',
+      EMAIL_ERROR_PLACEHOLDER: 'Enter your email address',
+      PHONE_PLACEHOLDER: 'Phone',
+      PHONE_ERROR_PLACEHOLDER: 'Enter your phone number',
+      MESSAGE_PLACEHOLDER: 'Your message',
+
+      SUBMIT_BTN: 'Register',
+      SUBMIT_BTN_SUCCESS: 'You registered',
 
     })
     .translations('ua', {
@@ -101,7 +131,37 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).control
       SESSION_TITLE_5: 'Ваша тема',
       SESSION_TEXT_5: 'або окрема доповідь',
 
+      SCHEDULE: 'Розклад',
+      SCHEDULE_1: 'Реєстрація',
+      SCHEDULE_2: 'Відкриття симпозіуму',
+      SCHEDULE_3: 'Ι сесія',
+      SCHEDULE_4: 'Перерва на каву',
+      SCHEDULE_5: 'ΙΙ сесія ',
+      SCHEDULE_6: 'Обід',
+      SCHEDULE_7: 'Лекція',
+      SCHEDULE_8: 'ΙΙΙ сесія',
+      SCHEDULE_9: 'Перерва на каву',
+      SCHEDULE_10: 'ΙV сесія',
+      SCHEDULE_11: 'Закриття симпозіуму',
+      SCHEDULE_12: 'Вечеря',
 
+      REGISTRATION_CRITERIA: 'Умови участі',
+
+      REGISTRATION_STEP_1: 'Крок 1: Реєстрація',
+
+      NAME_PLACEHOLDER: 'Ім’я',
+      NAME_ERROR_MESSAGE: 'Введіть ім’я',
+      SNAME_PLACEHOLDER: 'Прізвище',
+      SNAME_ERROR_MESSAGE: 'Введіть прізвище',
+      EMAIL_PLACEHOLDER: 'Електронна адреса',
+      EMAIL_ERROR_PLACEHOLDER: 'Введіть електронну адресу',
+      PHONE_PLACEHOLDER: 'Телефон',
+      PHONE_ERROR_PLACEHOLDER: 'Введіть номер телефону',
+      MESSAGE_PLACEHOLDER: 'Ваше повідомлення',
+      SUBMIT_BTN: 'Зареєструватись',
+      SUBMIT_BTN_SUCCESS: 'Ви зареєструвались',
+
+      REGISTRATION_STEP_2: 'Крок 2: Оплата участі',
     });
 
   $translateProvider.preferredLanguage('ua');

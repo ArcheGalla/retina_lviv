@@ -7,7 +7,7 @@ angular.module("app").directive("registration", ["$timeout", "$http",
 
         $scope.cartNumber = " 5168 7423 5260 8263 ";
         $scope.moneyOwner = " Ревич Андрій Васильович ";
-        $scope.btnText = "Зареєструватись";
+        $scope.btnText = "SUBMIT_BTN";
 
 
         $scope.form = {
@@ -29,7 +29,7 @@ angular.module("app").directive("registration", ["$timeout", "$http",
                 message: ""
               };
             }
-            $scope.btnText = "Ви зареєструвались";
+            $scope.btnText = "SUBMIT_BTN_SUCCESS";
           });
         };
 
