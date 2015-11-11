@@ -6,70 +6,70 @@ angular.module("app").directive("schedule", [function () {
       $scope.schedule = [
         {
           icon: "fa-pencil-square-o",
-          text: "Реєстрація",
+          text: "SCHEDULE_1",
           time: "9:00"
         },
         {
           icon: "fa-university",
-          text: "Відкриття симпозіуму",
+          text: "SCHEDULE_2",
           time: "9:45"
         },
         {
           icon: "fa-microphone",
-          text: "Ι сесія",
+          text: "SCHEDULE_3",
           time: "10:00 - 11:30"
         },
         {
           icon: "fa-coffee",
-          text: "Перерва на каву",
+          text: "SCHEDULE_4",
           time: "11:30 - 12:00"
         }
         ,
         {
           icon: "fa-microphone",
-          text: "ΙΙ сесія ",
+          text: "SCHEDULE_5",
           time: "12:00 - 13:45"
         }
         ,
         {
           icon: "fa-cutlery",
-          text: "Обід",
+          text: "SCHEDULE_6",
           time: "13:45 - 14:45"
         }
         ,
         {
           icon: "fa-microphone",
-          text: "Лекція",
+          text: "SCHEDULE_7",
           time: "14:45 - 15:15"
         }
         ,
         {
           icon: "fa-microphone",
-          text: "ΙΙΙ сесія",
+          text: "SCHEDULE_8",
           time: "15:30 - 17:00"
         }
         ,
         {
           icon: "fa-coffee",
-          text: "Перерва на каву",
+          text: "SCHEDULE_9",
           time: "17:00 - 17:30"
         }
         ,
         {
           icon: "fa-microphone",
-          text: "ΙV сесія",
+          text: "SCHEDULE_10",
           time: "17:30-19:00 "
         }
         ,
         {
           icon: "fa-university",
-          text: "Закриття симпозіуму",
+          text: "SCHEDULE_11",
           time: "19:00-19:15"
         }
         ,
         {
           icon: "fa-glass",
-          text: "Вечеря",
+          text: "SCHEDULE_12",
           time: "20:30"
         }
       ];

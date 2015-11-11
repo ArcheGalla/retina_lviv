@@ -29,7 +29,6 @@ var transporter = nodemailer.createTransport('SMTP', {
 
 
 app.post("/register", function (req, res) {
-  console.log();
   var user = {
     name: req.body.name || ' error name ',
     sname: req.body.sname || ' error sname ',
@@ -40,11 +39,11 @@ app.post("/register", function (req, res) {
 
 // setup e-mail data with unicode symbols
   var mailOptions = {
-    from: 'Fred Foo ✔ <retinalviv@gmail.com>',
+    from: 'New User <retinalviv@gmail.com>',
     to: "retinalviv@gmail.com, evgeniya.volkova1911@gmail.com",
     subject: 'meeting member', // Subject line
-    text: user.name + ' /n ' + user.sname + ' /n ' + user.email + ' /n ' + user.phone + ' /n ' + user.message,
-    html: user.name + ' <br> ' + user.sname + ' <br> ' + user.email + ' <br> ' + user.phone + ' <br/> ' + +user.message
+    text: 'Дані про нового учасника ' + ' /n ' +  user.name + ' /n ' + user.sname + ' /n ' + user.email + ' /n ' + user.phone + ' /n ' + user.message,
+    html: 'Дані про нового учасника ' + ' <br> ' +  user.name + ' <br> ' + user.sname + ' <br> ' + user.email + ' <br> ' + user.phone + ' <br/> ' + user.message
   };
 
 
@@ -53,8 +52,8 @@ app.post("/register", function (req, res) {
       res.status(401).send("bad");
       return console.log(error);
     }
-    console.log('Message sent: ' + info.response);
-    res.status(200).send(info.response)
+    console.log('Message sent: ' + info.toString());
+    res.status(200).send(info)
   });
 });
 
@@ -62,5 +61,5 @@ app.use('/', express.static(__dirname + '/public/dist/'));
 
 
 app.listen(port, function () {
-  console.log(" magic happen on " + port);
+  console.log(" Magic happen on " + port);
 });

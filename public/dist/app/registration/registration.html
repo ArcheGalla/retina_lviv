@@ -1,16 +1,15 @@
 <div class="container">
   <div class="row registration-text">
     <div class="col-lg-12 text-center conditions">
-      <h1 style="color: #fed136;">Умови участі</h1>
+      <h1 style="color: #fed136;">{{ 'REGISTRATION_CRITERIA'| translate}}</h1>
 
-      <h2 class="text-left">Крок 1: Реєстрація</h2>
+      <h2 class="text-left">{{ 'REGISTRATION_STEP_1'| translate}}</h2>
 
       <div class="row">
         <div class="col-lg-12">
-          <!--<h1 class="text-uppercase text-center form-title">форма реєстрації</h1>-->
           <br/>
 
-          <form name="register" id="contactForm" ng-submit="submit(form)" novalidate>
+          <form name="register" id="contactForm" ng-submit="submit(form,register.$valid)" novalidate>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -18,22 +17,22 @@
                          name="name"
                          class="form-control"
                          ng-model="form.name"
-                         placeholder="Ім’я" id="name" required>
+                         placeholder="{{ 'NAME_PLACEHOLDER'| translate}}" id="name" required>
 
-                  <p ng-if="register.name.$invalid && register.$submitted && register.$untouched" class="help-block text-danger">Введіть
-                    ім’я</p>
+                  <p ng-if="register.name.$invalid && register.$submitted && register.name.$untouched"
+                     class="help-block text-danger">{{'NAME_ERROR_MESSAGE' | translate}}</p>
                 </div>
 
                 <div class="form-group">
                   <input type="text"
                          name="sname"
                          class="form-control"
-                         placeholder="Прізвище"
+                         placeholder="{{ 'SNAME_PLACEHOLDER'| translate}}"
                          ng-model="form.sname"
                          required>
 
-                  <p ng-if="register.sname.$invalid && register.$submitted && register.$untouched" class="help-block text-danger">Введіть
-                    прізвище</p>
+                  <p ng-if="register.sname.$invalid && register.$submitted && register.sname.$untouched"
+                     class="help-block text-danger">{{ 'SNAME_ERROR_MESSAGE'| translate}}</p>
                 </div>
 
 
@@ -41,12 +40,12 @@
                   <input type="email"
                          name="email"
                          class="form-control"
-                         placeholder="Електрона адреса"
+                         placeholder="{{ 'EMAIL_PLACEHOLDER'| translate}}"
                          ng-model="form.email"
                          required>
 
-                  <p ng-if="register.email.$invalid && register.$submitted && register.$untouched" class="help-block text-danger">Введіть
-                    електронну адресу</p>
+                  <p ng-if="register.email.$invalid && register.$submitted && register.email.$untouched"
+                     class="help-block text-danger">{{ 'EMAIL_ERROR_PLACEHOLDER'| translate}}</p>
                 </div>
                 <div class="form-group">
                   <input
@@ -56,86 +55,52 @@
                     ng-model="form.phone"
                     mask="(999) 999-99-99"
                     id="phone"
-                    placeholder="Телефон"
+                    placeholder="{{ 'PHONE_PLACEHOLDER'| translate}}"
                     required>
 
-                  <p ng-if="register.phone.$invalid && register.$submitted && register.$untouched" class="help-block text-danger">Введіть номер
-                    телефону</p>
+                  <p ng-if="register.phone.$invalid && register.$submitted && register.phone.$untouched"
+                     class="help-block text-danger">{{ 'PHONE_ERROR_PLACEHOLDER'| translate}}</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                 <textarea class="form-control"
-                          placeholder="Ваше повідомлення"
+                          placeholder="{{ 'MESSAGE_PLACEHOLDER'| translate}}"
                           id="message"
-                          ng-model="form.message"
-                          required>
-
+                          name="message"
+                          ng-model="form.message">
                 </textarea>
-                  <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="clearfix"></div>
-              <!--<p ng-if="registerSuccess" class="help-block text-danger">Реєстрація пройшла успішно !</p>-->
-
               <div class="col-lg-12 text-center">
-                <button type="submit" class="btn btn-xl">{{btnText}}</button>
+                <button type="submit" class="btn btn-xl">{{btnText | translate}}</button>
               </div>
             </div>
           </form>
         </div>
       </div>
 
-      <h2 class="text-left">Крок 2: Оплата участі</h2>
+      <h2 class="text-left">{{ 'REGISTRATION_STEP_2' | translate }}</h2>
       <ul class="text-regist">
         <br/>
-        <li><i class="fa fa-ticket"></i> <strong>до 15 грудня 2015 – 300 грн</strong></li>
-        <li><i class="fa fa-ticket"></i> <strong>до 15 лютого 2015 – 400 грн</strong></li>
-        <li><i class="fa fa-ticket"></i> <strong>у день проведення – 450 грн</strong></li>
+        <li><i class="fa fa-ticket"></i> <strong>{{ 'PAY_1' | translate }}</strong></li>
+        <li><i class="fa fa-ticket"></i> <strong>{{ 'PAY_2' | translate }}</strong></li>
+        <li><i class="fa fa-ticket"></i> <strong>{{ 'PAY_3' | translate }}</strong></li>
       </ul>
       <br/>
 
       <p class="text-regist text-left">
-        Зробити грошовий внесок, перерахувавши певну суму на рахунок <i class="fa fa-credit-card"></i>
-        <strong> {{cartNumber}}</strong>, на ім’я <strong>{{ moneyOwner }}</strong>
+        {{ 'PAY_OPTIONS_1' | translate }} <i class="fa fa-credit-card"> </i>
+        <strong> {{cartNumber}}</strong>,
+        {{ 'PAY_OPTIONS_2' | translate }} <strong>{{ 'CART_OWNER'| translate }}</strong>
       </p>
       <br/>
 
       <p class="text-regist">
-        Після виконання наданих пунктів з Вами зв’яжеться наш менеджер, для остаточного підтвердження Вашої участі у
-        симпозіумі «РЕТІНА-ЛЬВІВ 2016».
+        {{ 'PAY_OPTIONS_3' | translate }}
         <br/>
       </p>
-      <!------------------------------------------------------------------------------------------------>
-      <!--                    OLD                                                                     -->
-      <!------------------------------------------------------------------------------------------------>
-      <!--<br/>-->
-      <!--<br/>-->
-      <!--<h5>Для участі у симпозіумі «РЕТІНА-ЛЬВІВ 2016» необхідно зробити разовий внесок у розмірі:</h5>-->
-      <!--<br/>-->
-      <!--<ul class="text-regist">-->
-      <!--<li><i class="fa fa-ticket"></i> <strong>до 15 грудня 2015 – 300 грн</strong></li>-->
-      <!--<li><i class="fa fa-ticket"></i> <strong>до 15 лютого 2015 – 400 грн</strong></li>-->
-      <!--<li><i class="fa fa-ticket"></i> <strong>у день проведення – 450 грн</strong></li>-->
-      <!--</ul>-->
-      <!--<br/>-->
-
-      <!--<h5>Для підтвердження своєї участі у симпозіумі Вам необхідно:</h5>-->
-      <!--<br/>-->
-
-      <!--<p class="text-regist">-->
-      <!--Заповнити форму реєстрації, яка знаходиться нижче. <br/>-->
-      <!--Зробити грошовий внесок, перерахувавши певну суму на рахунок <i class="fa fa-credit-card"></i>-->
-      <!--<strong> {{cartNumber}}</strong>, на ім’я {{ moneyOwner }}-->
-      <!--</p>-->
-      <!--<br/>-->
-
-      <!--<p class="text-regist">-->
-      <!--Після виконання наданих пунктів з Вами зв’яжеться наш менеджер, для остаточного підтвердження Вашої участі у-->
-      <!--симпозіумі «РЕТІНА-ЛЬВІВ 2016».-->
-      <!--<br/>-->
-      <!--</p>-->
-
     </div>
   </div>
 

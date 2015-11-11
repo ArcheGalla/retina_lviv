@@ -20,11 +20,17 @@ angular.module("app").directive("registration", ["$timeout", "$http", "$log",
 
         $scope.submit = function (form, isValid) {
           if (isValid) {
-            $log.info("form valid");
-            console.log("form is valid");
-            $http.post("/register", JSON.stringify(form)).then(function (response) {
+
+            var params = {
+              name: form.name,
+              sname: form.sname,
+              email: form.email,
+              phone: form.phone,
+              message: form.message
+            };
+
+            $http.post("/register", params).then(function (response) {
               if (response.status === 200) {
-                $log.info("request success");
                 $scope.form = {
                   name: "",
                   sname: "",
@@ -33,11 +39,12 @@ angular.module("app").directive("registration", ["$timeout", "$http", "$log",
                   message: ""
                 };
                 $scope.btnText = "SUBMIT_BTN_SUCCESS";
+                $log.info("request success");
               }
+            }).catch(function (err) {
+              $log.error(err)
             });
           }
-
-
         }
       }
     }
