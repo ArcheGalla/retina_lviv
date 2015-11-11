@@ -36,7 +36,7 @@
   <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
   <![endif]-->
 </head>
-<body id="page-top" class="index scrollme" ng-controller="MainController">
+<body id="page-top" class="index scrollme page-scroll" ng-controller="MainController">
 
 <!---------------------------------------------------------------------------------------------->
 <!-- Navigation -->
@@ -65,7 +65,7 @@
           <a href="#page-top"></a>
         </li>
         <li>
-          <a class="page-scroll text-bold" href="#session">{{ 'NAV_ABOUT' | translate }}</a>
+          <a class="page-scroll text-bold" href="#about">{{ 'NAV_ABOUT' | translate }}</a>
         </li>
         <li>
           <a class="page-scroll" href="#schedule">{{ 'NAV_SCHEDULE' | translate }}</a>
@@ -106,10 +106,10 @@
 
 <section>
   <introduction></introduction>
+<div id="about"></div>
 </section>
 
 <countdown></countdown>
-
 <div id="roadmap">
   <road-map></road-map>
 </div>
