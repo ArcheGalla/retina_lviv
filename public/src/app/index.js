@@ -1,12 +1,11 @@
 angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
   controller("MainController", ["$scope", "$translate", function ($scope, $translate) {
     $scope.changeLanguage = function () {
-      $translate.use() === 'ua' ? $translate.use('en') : $translate.use('ua');
+      $translate.use() === 'en' ? $translate.use('ua') : $translate.use('en');
     };
 
   }]).config(function ($translateProvider) {
 
-    $translateProvider.useSanitizeValueStrategy(null);
     $translateProvider
       .translations('en', {
         CHOOSE_LANG: 'мова',
@@ -189,7 +188,8 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
 
       });
 
-    $translateProvider.preferredLanguage('en');
+    $translateProvider.preferredLanguage('ua');
+    $translateProvider.useSanitizeValueStrategy(null);
   });
 
 
