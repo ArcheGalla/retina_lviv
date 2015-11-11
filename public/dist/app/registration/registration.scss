@@ -1,0 +1,29 @@
+.conditions {
+  color: white;
+  ul, li {
+    text-decoration: none;
+    list-style: none;
+  }
+}
+
+#registration {
+  .form-title {
+    color: #fed136;
+    margin: 30px 0;
+  }
+  .fa {
+    color: #19BEB0;
+  }
+}
+
+.registration-text {
+  .text-regist {
+    text-align: justify;
+    line-height: 1.5;
+    //padding: 0 80px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    font-size: 1.8rem;
+    list-style: none
+  }
+}
