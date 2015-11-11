@@ -8,7 +8,7 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
 
     $translateProvider
       .translations('en', {
-        CHOOSE_LANG: 'мова',
+        CHOOSE_LANG: 'UKR',
         NAV_ABOUT: 'About',
         NAV_SCHEDULE: 'Timetable',
         NAV_REGISTRATION: 'Registration',
@@ -92,7 +92,7 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
 
       })
       .translations('ua', {
-        CHOOSE_LANG: 'english',
+        CHOOSE_LANG: 'ENG',
         NAV_ABOUT: 'про симпозіум',
         NAV_SCHEDULE: 'розклад',
         NAV_REGISTRATION: 'реєстрація',
