@@ -6,7 +6,7 @@ angular.module("app").directive("location", [function () {
       $scope.phone_one = "+38(067)-849-48-02";
       $scope.phone_two = " +38(063)-626-13-61";
       $scope.email = "retinalviv@gmail.com";
-      $scope.facebook = "https://www.facebook.com/events/1635927466662792/";
+      $scope.facebook = "https://www.facebook.com/retinalviv/";
     }
   }
 }]);
