@@ -85,21 +85,21 @@
       <h2 class="text-left">{{ 'REGISTRATION_STEP_2' | translate }}</h2>
       <ul class="text-regist">
         <br/>
-        <li><i class="fa fa-ticket"></i> <strong>до 1 січня 2016 – 300 грн</strong></li>
-        <li><i class="fa fa-ticket"></i> <strong>до 1 березня 2016 – 400 грн</strong></li>
-        <li><i class="fa fa-ticket"></i> <strong>у день проведення – 500 грн</strong></li>
+        <li><i class="fa fa-ticket"></i> <strong>{{ 'PAY_1' | translate }}</strong></li>
+        <li><i class="fa fa-ticket"></i> <strong>{{ 'PAY_2' | translate }}</strong></li>
+        <li><i class="fa fa-ticket"></i> <strong>{{ 'PAY_3' | translate }}</strong></li>
       </ul>
       <br/>
 
       <p class="text-regist text-left">
-        Зробити грошовий внесок, перерахувавши певну суму на рахунок <i class="fa fa-credit-card"></i>
-        <strong> {{cartNumber}}</strong>, на ім’я <strong>{{ moneyOwner }}</strong>
+        {{ 'PAY_OPTIONS_1' | translate }} <i class="fa fa-credit-card"> </i>
+        <strong> {{cartNumber}}</strong>,
+        {{ 'PAY_OPTIONS_2' | translate }} <strong>{{ 'CART_OWNER'| translate }}</strong>
       </p>
       <br/>
 
       <p class="text-regist">
-        Після виконання наданих пунктів з Вами зв’яжеться наш менеджер, для остаточного підтвердження Вашої участі у
-        симпозіумі «РЕТІНА-ЛЬВІВ 2016».
+        {{ 'PAY_OPTIONS_3' | translate }}
         <br/>
       </p>
     </div>

@@ -81,9 +81,23 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).control
       PHONE_PLACEHOLDER: 'Phone',
       PHONE_ERROR_PLACEHOLDER: 'Enter your phone number',
       MESSAGE_PLACEHOLDER: 'Your message',
-
       SUBMIT_BTN: 'Register',
       SUBMIT_BTN_SUCCESS: 'You registered',
+      REGISTRATION_STEP_2: 'Step 2: Payment for participation',
+      PAY_1: 'until 1 January 2016 - 300 UAH',
+      PAY_2: 'before March 1, 2016 - 400 UAH',
+      PAY_3: 'last day  - 500 UAH',
+      PAY_OPTIONS_1: 'Make a monetary contribution by transferring a certain amount to the account',
+      PAY_OPTIONS_2: 'addressed',
+      CART_OWNER: 'Revych Andrei V.',
+      PAY_OPTIONS_3: 'After completing the given items from our manager will contact you for final confirmation of your participation in the symposium "RETINA Lviv-2016".',
+      LOCATION_PLACE: 'Hotel «Premier Hotel Dnister»',
+      LOCATION_PLACE_STREET: 'st. Matejko, 6, Lviv 79007, Ukraine',
+      LOCATION_PLACE_PHONE: ' +38 032 297 43 17',
+      ORG_GROUP: 'Organizational group',
+      ORG_NAME_VOLKOVA: 'Eugenia Volkova',
+      ORG_NAME_SMETANA: 'Vera Pavlova',
+      FOOTER_ORG: 'Organisers'
 
     })
     .translations('ua', {
@@ -162,9 +176,27 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).control
       SUBMIT_BTN_SUCCESS: 'Ви зареєструвались',
 
       REGISTRATION_STEP_2: 'Крок 2: Оплата участі',
+      PAY_1: 'до 1 січня 2016 – 300 грн',
+      PAY_2: 'до 1 березня 2016 – 400 грн',
+      PAY_3: 'у день проведення – 500 грн',
+      PAY_OPTIONS_1: 'Зробити грошовий внесок, перерахувавши певну суму на рахунок',
+      PAY_OPTIONS_2: 'на ім’я',
+      CART_OWNER: 'Ревич Андрій Васильович',
+      PAY_OPTIONS_3: 'Після виконання наданих пунктів з Вами зв’яжеться наш менеджер, для остаточного підтвердження Вашої участі у симпозіумі «РЕТІНА-ЛЬВІВ 2016».',
+
+      LOCATION_PLACE: 'Готель «Premier Hotel Dnister»',
+      LOCATION_PLACE_STREET: 'вул. Матейка, 6, Львів 79007, Україна',
+      LOCATION_PLACE_PHONE: 'тел. +38 032 297 43 17',
+
+      ORG_GROUP: 'Організаційна група',
+      ORG_NAME_VOLKOVA: 'Волкова Євгенія',
+      ORG_NAME_SMETANA: 'Вавілова Віра',
+
+      FOOTER_ORG: 'Організатори'
+
     });
 
-  $translateProvider.preferredLanguage('ua');
+  $translateProvider.preferredLanguage('en');
 });
 
 
