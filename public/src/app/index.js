@@ -1,9 +1,9 @@
 angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
-  controller("MainController", ["$scope", "$translate", function ($scope, $translate) {
+  controller("MainController", ["$scope", "$translate","$window", function ($scope, $translate,$window) {
     $scope.changeLanguage = function () {
       $translate.use() === 'en' ? $translate.use('ua') : $translate.use('en');
     };
-
+    //$window.on("");
   }]).config(function ($translateProvider) {
 
     $translateProvider
@@ -24,7 +24,7 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         INTRO_TEXT_5: 'Yours faithfully,',
         INTRO_TEXT_6: 'the head doctor of the “Oculus” medical center',
         INTRO_TEXT_7: 'Prof. Igor Novytskyy',
-        COUNTER_TITLE: ' Prior to the left ',
+        COUNTER_TITLE: 'before start',
         ROAD_TITLE: 'The format of the symposium',
         ROAD_TEXT: 'The symposium will take place in the form of short (1.5 hrs.) sessions with individual topics. Reports of up to 7 minutes (including the slides and movies) preferably present as an issue for discussion. Question Time is approximately 5 minutes and discussion - 5 minutes. As part of the symposium are also scheduled several lectures (30 minutes) which will take place simultaneously in different classrooms for the audience according to its  interests.',
         ROAD_HOW_TO: 'How to become a speaker?',
@@ -47,7 +47,7 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         SESSION_TEXT_4: 'Hemophthalm - indications for surgery. Intraocular foreign body. Lens luxation, IOL fixation. Endophthalmitis: when an antibiotic and when surgery? If damaged everething - all at once?',
         SESSION_TITLE_5: 'Your theme',
         SESSION_TEXT_5: 'or a separate report',
-        SCHEDULE: 'Розклад',
+        SCHEDULE: 'timetable',
         SCHEDULE_1: 'Registration',
         SCHEDULE_2: 'Opening the symposium',
         SCHEDULE_3: 'Ι session',
@@ -58,7 +58,7 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         SCHEDULE_8: 'ΙΙΙ session',
         SCHEDULE_9: 'Coffee break',
         SCHEDULE_10: 'ΙV session',
-        SCHEDULE_11: 'Closing symposium',
+        SCHEDULE_11: 'Closing the symposium',
         SCHEDULE_12: 'Dinner',
         REGISTRATION_CRITERIA: 'Conditions of participation',
         REGISTRATION_STEP_1: 'Step 1: Register',
@@ -74,22 +74,34 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         SUBMIT_BTN: 'Register',
         SUBMIT_BTN_SUCCESS: 'You registered',
         REGISTRATION_STEP_2: 'Step 2: Payment for participation',
+        REGISTRATION_PARTICIPATION_1: 'For all participating',
         PAY_1: 'Till January, 2015 – 300 UAH',
+        PAY_INTERN_1: 'Till January, 2015 – 200 UAH',
         PAY_2: 'Till March, 2015 – 400 UAH',
+        PAY_INTERN_2: 'Till March, 2015 – 300 UAH',
         PAY_3: 'On the day of Symposium - 500 UAH',
+        PAY_INTERN_3: 'On the day of Symposium - 400 UAH',
         PAY_OPTIONS_1: 'Make a monetary contribution by transferring a certain amount to the account',
         PAY_OPTIONS_2: 'addressed',
         CART_OWNER: 'Revych Andrei V.',
-        PAY_OPTIONS_3: 'After completing the given items from our manager will contact you for final confirmation of your participation in the symposium "RETINA Lviv-2016".',
+        PAY_OPTIONS_3: 'After completing the given items our manager will contact you for final confirmation of your participation in the symposium "RETINA - LVIV 2016".',
         LOCATION_PLACE: 'Hotel «Premier Hotel Dnister»',
         LOCATION_PLACE_STREET: 'st. Matejko, 6, Lviv 79007, Ukraine',
         LOCATION_PLACE_PHONE: ' +38 032 297 43 17',
         ORG_GROUP: 'Organizational group',
         ORG_NAME_VOLKOVA: 'Eugenia Volkova',
         ORG_NAME_SMETANA: 'Vira Vavilova',
-        FOOTER_ORG: 'Organisers'
+        FOOTER_ORG: 'Organisers',
+        PARTNER_LINK_1:'Click to visit Oculus web site',
+        PARTNER_LINK_2:'Click to visit WWWWWW web site',
+        PARTNER_LINK_3:'Click to visit WWWWWW web site',
+        PARTNER_LINK_4:'Click to visit WWWWWW web site'
       })
       .translations('ua', {
+        PARTNER_LINK_1:'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
+        PARTNER_LINK_2:'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
+        PARTNER_LINK_3:'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
+        PARTNER_LINK_4:'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
         CHOOSE_LANG: 'ENG',
         NAV_ABOUT: 'про симпозіум',
         NAV_SCHEDULE: 'розклад',
@@ -108,7 +120,7 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         INTRO_TEXT_7: 'Професор Ігор Новицький',
         COUNTER_TITLE: 'До початку залишилось',
         ROAD_TITLE: 'Формат симпозіуму',
-        ROAD_TEXT: 'Симпозіум проходитиме у форматі коротких (1,5 год.) сесій з окремими темами. Доповіді тривалістю до 7 хвилин (включно зі слайдами і фільмами) бажан представити як питання для обговорення. Час на запитання становить орієнтовно 5 хвилин, і обговорення – ще 5 хвилин. В рамках симпозіуму також планується проведення кількох лекцій (до 30 хвилин), які будуть відбуватися одночасно в різних аудиторіях для слухачів згідно з їхніми інтересами.',
+        ROAD_TEXT: 'Симпозіум проходитиме у форматі коротких (1,5 год.) сесій з окремими темами. Доповіді тривалістю до 7 хвилин (включно зі слайдами і фільмами) бажано представити як питання для обговорення. Час на запитання становить орієнтовно 5 хвилин, і обговорення – ще 5 хвилин. В рамках симпозіуму також планується проведення кількох лекцій (до 30 хвилин), які будуть відбуватися одночасно в різних аудиторіях для слухачів згідно з їхніми інтересами.',
         ROAD_HOW_TO: 'Як стати доповідачем?',
         ROAD_HOW_ANS: 'Для формування сесій та детальної програми необхідно підтвердити Вашу участь як доповідача (лектора)',
         ROAD_DATE_1: 'до 15 грудня 2015 року',
@@ -156,13 +168,20 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         SUBMIT_BTN: 'Зареєструватись',
         SUBMIT_BTN_SUCCESS: 'Ви зареєструвались',
         REGISTRATION_STEP_2: 'Крок 2: Оплата участі',
+        REGISTRATION_PARTICIPATION_1: 'Для учасників',
+        REGISTRATION_PARTICIPATION_2: 'Для лікарів - інтернів',
         PAY_1: 'до 1 січня 2016 – 300 грн',
+        PAY_INTERN_1: 'до 1 січня 2016 – 200 грн',
         PAY_2: 'до 1 березня 2016 – 400 грн',
+        PAY_INTERN_2: 'до 1 березня 2016 – 300 грн',
         PAY_3: 'у день проведення – 500 грн',
-        PAY_OPTIONS_1: 'Зробити грошовий внесок, перерахувавши певну суму на рахунок',
+        PAY_INTERN_3: 'у день проведення – 400 грн',
+
+
+        PAY_OPTIONS_1: 'Зробити грошовий внесок, можна перерахувавши певну суму на рахунок',
         PAY_OPTIONS_2: 'на ім’я',
         CART_OWNER: 'Ревич Андрій Васильович',
-        PAY_OPTIONS_3: 'Після виконання наданих пунктів з Вами зв’яжеться наш менеджер, для остаточного підтвердження Вашої участі у симпозіумі «РЕТІНА-ЛЬВІВ 2016».',
+        PAY_OPTIONS_3: 'Після виконання вищезгаданих пунктів з Вами зв’яжеться наш менеджер, для остаточного підтвердження Вашої участі у симпозіумі «РЕТІНА-ЛЬВІВ 2016».',
         LOCATION_PLACE: 'Готель «Premier Hotel Dnister»',
         LOCATION_PLACE_STREET: 'вул. Матейка, 6, Львів 79007, Україна',
         LOCATION_PLACE_PHONE: 'тел. +38 032 297 43 17',
