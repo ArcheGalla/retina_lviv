@@ -77,6 +77,7 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         SUBMIT_BTN_SUCCESS: 'You registered',
         REGISTRATION_STEP_2: 'Step 2: Payment for participation',
         REGISTRATION_PARTICIPATION_1: 'For all participating',
+        REGISTRATION_PARTICIPATION_2: 'For  interns',
         PAY_1: 'Till January, 2015 – 300 UAH',
         PAY_INTERN_1: 'Till January, 2015 – 200 UAH',
         PAY_2: 'Till March, 2015 – 400 UAH',
