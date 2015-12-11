@@ -14,8 +14,31 @@
   .fa {
     color: #19BEB0;
   }
+
+  #message{
+    height: 403px;
+  }
 }
 
+.intern{
+  height: 60px;
+  text-align: right;
+
+  .radio{
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  span{
+    float: left;
+    line-height: 48px;
+    padding-left: 10px;
+  }
+  input {
+    display: inline-block;
+  }
+}
 .registration-text {
   .text-regist {
     text-align: justify;

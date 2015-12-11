@@ -61,6 +61,29 @@
                   <p ng-if="register.phone.$invalid && register.$submitted && register.phone.$untouched"
                      class="help-block text-danger">{{ 'PHONE_ERROR_PLACEHOLDER'| translate}}</p>
                 </div>
+                <!--ARE YOU INTERN -->
+                <div class="form-group">
+                  <div class="form-control intern">
+                    <span>{{ 'INTERN_PLACEHOLDER' | translate}}</span>
+                    <div class="btn-group" data-toggle="buttons">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" ng-model="form.intern" name="intern" value="YES" required>
+                          {{ 'YES'| translate }}
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" ng-model="form.intern" name="intern" value="NO" required checked>
+                          {{ 'NO'| translate }}
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p ng-if="register.intern.$invalid && register.$submitted && register.intern.$untouched"
+                     class="help-block text-danger">{{ 'EMAIL_INTERN_PLACEHOLDER'| translate}}</p>
+                </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">

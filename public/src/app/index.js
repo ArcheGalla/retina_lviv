@@ -1,9 +1,9 @@
 angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
-  controller("MainController", ["$scope", "$translate","$window", function ($scope, $translate,$window) {
+  controller("MainController", ["$scope", "$translate","$window", function ($scope, $translate) {
     $scope.changeLanguage = function () {
       $translate.use() === 'en' ? $translate.use('ua') : $translate.use('en');
     };
-    //$window.on("");
+
   }]).config(function ($translateProvider) {
 
     $translateProvider
@@ -69,7 +69,9 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         SNAME_PLACEHOLDER: 'Surname',
         SNAME_ERROR_MESSAGE: 'Enter your surname',
         EMAIL_PLACEHOLDER: 'E-mail address',
+        INTERN_PLACEHOLDER: 'Are you intern ?',
         EMAIL_ERROR_PLACEHOLDER: 'Enter your email address',
+        INTERN_ERROR_PLACEHOLDER: 'Choose one',
         PHONE_PLACEHOLDER: 'Phone',
         PHONE_ERROR_PLACEHOLDER: 'Enter your phone number',
         MESSAGE_PLACEHOLDER: 'Your message',
@@ -98,7 +100,9 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         PARTNER_LINK_1:'Click to visit Oculus web site',
         PARTNER_LINK_2:'Click to visit WWWWWW web site',
         PARTNER_LINK_3:'Click to visit WWWWWW web site',
-        PARTNER_LINK_4:'Click to visit WWWWWW web site'
+        PARTNER_LINK_4:'Click to visit WWWWWW web site',
+        YES: 'Yes',
+        No: 'No '
       })
       .translations('ua', {
         PARTNER_LINK_1:'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
@@ -166,7 +170,9 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         SNAME_PLACEHOLDER: 'Прізвище',
         SNAME_ERROR_MESSAGE: 'Введіть прізвище',
         EMAIL_PLACEHOLDER: 'Електронна адреса',
+        INTERN_PLACEHOLDER: 'Ви інтерн ?',
         EMAIL_ERROR_PLACEHOLDER: 'Введіть електронну адресу',
+        EMAIL_INTERN_PLACEHOLDER: 'Вкажіть чи вляєтесь ви інтерном',
         PHONE_PLACEHOLDER: 'Телефон',
         PHONE_ERROR_PLACEHOLDER: 'Введіть номер телефону',
         MESSAGE_PLACEHOLDER: 'Ваше повідомлення',
@@ -191,7 +197,9 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         ORG_GROUP: 'Організаційна група',
         ORG_NAME_VOLKOVA: 'Волкова Євгенія',
         ORG_NAME_SMETANA: 'Вавілова Віра',
-        FOOTER_ORG: 'Організатори'
+        FOOTER_ORG: 'Організатори',
+        YES: 'Так',
+        NO: 'Ні '
       });
 
     $translateProvider.preferredLanguage('ua');
