@@ -8,6 +8,7 @@
 
 var gulp = require('gulp');
 var wrench = require('wrench');
+var forever = require("forever-monitor");
 
 /**
  *  This will load all js or coffee files in the gulp directory
@@ -26,4 +27,10 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
  */
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
+});
+
+//gulp.task('production',['build'],function () {
+gulp.task('production',function () {
+  console.log('build should be complete at this moment');
+  new forever.Monitor('../app.js').start();
 });
