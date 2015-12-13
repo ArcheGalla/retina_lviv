@@ -49,6 +49,14 @@ build/Release
 # Dependency directory
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
+public/node_modules
+public/bower_components
+public/node_modules/public/
+public/.sass-cache/
+public/.idea/
+public/.tmp/
+
+
 public/dist
 
 # Created by .ignore support plugin (hsz.mobi)
