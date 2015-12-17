@@ -10,6 +10,5 @@ wrench
 
 
 gulp.task('default', ["clean","build"], function () {
-  console.log("server start");
   new forever.Monitor('app.js').start();
 });
