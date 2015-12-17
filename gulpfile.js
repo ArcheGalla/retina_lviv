@@ -1,6 +1,7 @@
 'use strict';
 var gulp = require('gulp');
 var wrench = require('wrench');
+var forever = require('forever-monitor');
 
 wrench
   .readdirSyncRecursive('./gulp')
@@ -9,5 +10,6 @@ wrench
 
 
 gulp.task('default', ["clean","build"], function () {
+  console.log("server start");
   new forever.Monitor('app.js').start();
 });
