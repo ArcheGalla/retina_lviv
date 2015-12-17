@@ -1,7 +1,6 @@
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
-var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
@@ -60,13 +59,12 @@ app.post("/register", function (req, res) {
       res.status(401).send("bad");
       return console.log(error);
     }
-    console.log('Message sent: ' + info.toString());
+    //console.log('Message sent: ' + info.toString());
     res.status(200).send(info)
   });
 });
 
 app.use('/', express.static(__dirname + '/public/dist/'));
-app.use('/app',express.static(__dirname + '/src/app'));
 
 
 app.listen(port, function () {
