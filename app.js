@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 
 var app = express();
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -66,7 +66,7 @@ app.post("/register", function (req, res) {
 });
 
 app.use('/', express.static(__dirname + '/public/dist/'));
-app.use('/app',express.static(__dirname + '/public/src/app/'));
+app.use('/app',express.static(__dirname + '/src/app'));
 
 
 app.listen(port, function () {
