@@ -48,16 +48,26 @@
     <div class="row">
       <div class="col-md-5">
         <div class="row">
-          <div class="col-lg-4 bold copyright">
+          <div class="col-lg-3 bold copyright">
             {{'FOOTER_ORG'|translate}}:
           </div>
-          <div class="col-lg-8 text-left ">
-            <span>{{'ORG_NAME_VOLKOVA'|translate}} : <i class="fa fa-mobile"></i>
-              <a ng-href="tel:{{phone_one}}">{{phone_one}}</a>
-            </span><br/>
-            <span>{{'ORG_NAME_SMETANA'|translate}} : <i class="fa fa-mobile"></i>
-              <a ng-href="tel:{{phone_two}}">{{phone_two}}</a>
-            </span>
+          <div class="col-lg-9 text-left">
+            <div class="row">
+              <div class="col-xs-5">
+                <div class="text-right">{{'ORG_NAME_VOLKOVA'|translate}} :</div>
+                <div class="text-right">{{'ORG_NAME_SMETANA'|translate}} :</div>
+              </div>
+              <div class="col-xs-7">
+                <div class="text-left">
+                  <i class="fa fa-mobile"></i><a ng-href="tel:{{phone_one}}">{{phone_one}}</a>
+                </div>
+                <div class="text-left">
+                  <i class="fa fa-mobile"></i> <a ng-href="tel:{{phone_two}}">{{phone_two}}</a>
+                  <br>
+                  <i class="fa fa-mobile"></i> <a ng-href="tel:{{phone_three}}">{{phone_three}}</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
