@@ -13,13 +13,7 @@
     "nedb": "^1.2.1",
     "nodemailer": "^0.7.1",
     "request": "^2.65.0",
-    "serve-favicon": "~2.3.0"
-  },
-  "scripts": {
-    "test": "gulp test",
-    "main": "app.js"
-  },
-  "devDependencies": {
+    "serve-favicon": "~2.3.0",
     "gulp": "~3.9.0",
     "gulp-autoprefixer": "~2.3.1",
     "gulp-angular-templatecache": "~1.6.0",
@@ -62,6 +56,13 @@
     "chalk": "~1.0.0",
     "uglify-save-license": "~0.4.1",
     "wrench": "~1.5.8"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "main": "app.js"
+  },
+  "devDependencies": {
+
   },
   "engines": {
     "node": ">=0.10.0"
