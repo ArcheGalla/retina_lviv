@@ -89,7 +89,7 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
         PAY_OPTIONS_1: 'Make a monetary contribution by transferring a certain amount to the account',
         PAY_OPTIONS_2: 'addressed',
         CART_OWNER: 'Revych Andrei V.',
-        PAY_OPTIONS_3: 'After completing the given items our manager will contact you for final confirmation of your participation in the symposium "RETINA - LVIV 2016".',
+        PAY_OPTIONS_3: 'After you pass Step 1, our manager will contact you and send a payment document on your e-mail. You should print it and make payment in the bank. After completing the given items our manager will contact you once more for final confirmation of your participation in the symposium "RETINA - LVIV 2016".',
         LOCATION_PLACE: 'Hotel «Premier Hotel Dnister»',
         LOCATION_PLACE_STREET: 'st. Matejko, 6, Lviv 79007, Ukraine',
         LOCATION_PLACE_PHONE: ' +38 032 297 43 17',
