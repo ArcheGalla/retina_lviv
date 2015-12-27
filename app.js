@@ -62,4 +62,4 @@ app.post("/register", function (req, res) {
   });
 });
 app.use('/', express.static(__dirname + '/public/dist/'));
-app.listen(port, function () { console.log(" Magic happen on " + process.env.PORT); });
+app.listen(port, function () { console.log(" Magic happen on " + port ); });

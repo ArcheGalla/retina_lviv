@@ -4,7 +4,7 @@ angular.module("app").directive("session", [function () {
     replace: true,
     templateUrl: "app/session/session.html",
     link: function ($scope, element, attrs) {
-      element.find(".page-scroll").bind("click", function (event) {
+      element.bind("click", function (event) {
         event.stopPropagation();
         event.preventDefault();
         var $anchor = $(this);

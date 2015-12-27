@@ -1,4 +1,4 @@
-angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
+angular.module("app", ["ngMask", "pascalprecht.translate"]).
   controller("MainController", ["$scope", "$translate","$window", function ($scope, $translate) {
     $scope.changeLanguage = function () {
       $translate.use() === 'en' ? $translate.use('ua') : $translate.use('en');
@@ -204,6 +204,21 @@ angular.module("app", ["ngAnimate", "ngMask", "pascalprecht.translate"]).
 
     $translateProvider.preferredLanguage('ua');
     $translateProvider.useSanitizeValueStrategy(null);
+  }).directive("animate", function () {
+  return function (scope, element, attr) {
+    element.bind("click", function (event) {
+      event.stopPropagation();
+      event.preventDefault();
+      var $anchor = $(this);
+      $('html, body')
+        .stop()
+        .animate({
+          scrollTop: $($anchor.attr('href'))
+            .offset()
+            .top
+        }, 1500, 'easeInOutExpo');
+    });
+  }
   });
 
 
