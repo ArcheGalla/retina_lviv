@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
-
 // create reusable transporter object using SMTP transport
 var transporter = nodemailer.createTransport('SMTP', {
   service: "Gmail",
@@ -21,7 +20,6 @@ var transporter = nodemailer.createTransport('SMTP', {
     pass: "REtinaLViv02"
   }
 });
-
 
 app.post("/register", function (req, res) {
   var user = {
@@ -63,10 +61,5 @@ app.post("/register", function (req, res) {
     res.status(200).send(info)
   });
 });
-
 app.use('/', express.static(__dirname + '/public/dist/'));
-
-
-app.listen(port, function () {
-  console.log(" Magic happen on " + port);
-});
+app.listen(port, function () { console.log(" Magic happen on " + port); });

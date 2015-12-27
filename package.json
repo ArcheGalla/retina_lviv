@@ -12,7 +12,6 @@
     "debug": "~2.2.0",
     "del": "~1.2.0",
     "express": "~4.13.1",
-    "forever": "^0.15.1",
     "forever-monitor": "^1.7.0",
     "gulp": "~3.9.0",
     "gulp-angular-filesort": "~1.1.1",
@@ -58,9 +57,14 @@
     "wiredep": "~2.2.2",
     "wrench": "~1.5.8"
   },
+  "bin": {
+    "bower": "./node_modules/.bin/bower",
+    "gulp": "./node_modules/.bin/gulp"
+  },
   "scripts": {
-    "test": "gulp test",
-    "main": "app.js"
+    "prestart": "bower install &&  gulp build_production",
+    "main": "app.js",
+    "start": "gulp start"
   },
   "devDependencies": {},
   "engines": {
