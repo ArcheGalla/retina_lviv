@@ -1,5 +1,6 @@
-angular.module("app", ["ngMask", "pascalprecht.translate"]).
-  controller("MainController", ["$scope", "$translate","$window", function ($scope, $translate) {
+(function () {
+  angular.module("app", ["ngMask", "pascalprecht.translate"]).
+  controller("MainController", ["$scope", "$translate", "$window", function ($scope, $translate) {
     $scope.changeLanguage = function () {
       $translate.use() === 'en' ? $translate.use('ua') : $translate.use('en');
     };
@@ -97,18 +98,18 @@ angular.module("app", ["ngMask", "pascalprecht.translate"]).
         ORG_NAME_VOLKOVA: 'Eugenia Volkova',
         ORG_NAME_SMETANA: 'Vira Vavilova',
         FOOTER_ORG: 'Organisers',
-        PARTNER_LINK_1:'Click to visit Oculus web site',
-        PARTNER_LINK_2:'Click to visit WWWWWW web site',
-        PARTNER_LINK_3:'Click to visit WWWWWW web site',
-        PARTNER_LINK_4:'Click to visit WWWWWW web site',
+        PARTNER_LINK_1: 'Click to visit Oculus web site',
+        PARTNER_LINK_2: 'Click to visit WWWWWW web site',
+        PARTNER_LINK_3: 'Click to visit WWWWWW web site',
+        PARTNER_LINK_4: 'Click to visit WWWWWW web site',
         YES: 'Yes',
         No: 'No '
       })
       .translations('ua', {
-        PARTNER_LINK_1:'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
-        PARTNER_LINK_2:'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
-        PARTNER_LINK_3:'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
-        PARTNER_LINK_4:'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
+        PARTNER_LINK_1: 'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
+        PARTNER_LINK_2: 'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
+        PARTNER_LINK_3: 'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
+        PARTNER_LINK_4: 'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
         CHOOSE_LANG: 'ENG',
         NAV_ABOUT: 'про симпозіум',
         NAV_SCHEDULE: 'розклад',
@@ -205,20 +206,21 @@ angular.module("app", ["ngMask", "pascalprecht.translate"]).
     $translateProvider.preferredLanguage('ua');
     $translateProvider.useSanitizeValueStrategy(null);
   }).directive("animate", function () {
-  return function (scope, element, attr) {
-    element.bind("click", function (event) {
-      event.stopPropagation();
-      event.preventDefault();
-      var $anchor = $(this);
-      $('html, body')
-        .stop()
-        .animate({
-          scrollTop: $($anchor.attr('href'))
-            .offset()
-            .top
-        }, 1500, 'easeInOutExpo');
-    });
-  }
+    return function (scope, element, attr) {
+      element.bind("click", function (event) {
+        event.stopPropagation();
+        event.preventDefault();
+        var $anchor = $(this);
+        $('html, body')
+          .stop()
+          .animate({
+            scrollTop: $($anchor.attr('href'))
+              .offset()
+              .top
+          }, 1500, 'easeInOutExpo');
+      });
+    }
   });
 
 
+}());
