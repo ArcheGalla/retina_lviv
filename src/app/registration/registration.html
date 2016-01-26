@@ -22,7 +22,6 @@
                   <p ng-if="register.name.$invalid && register.$submitted && register.name.$untouched"
                      class="help-block text-danger">{{'NAME_ERROR_MESSAGE' | translate}}</p>
                 </div>
-
                 <div class="form-group">
                   <input type="text"
                          name="sname"
@@ -34,8 +33,6 @@
                   <p ng-if="register.sname.$invalid && register.$submitted && register.sname.$untouched"
                      class="help-block text-danger">{{ 'SNAME_ERROR_MESSAGE'| translate}}</p>
                 </div>
-
-
                 <div class="form-group">
                   <input type="email"
                          name="email"
@@ -61,7 +58,18 @@
                   <p ng-if="register.phone.$invalid && register.$submitted && register.phone.$untouched"
                      class="help-block text-danger">{{ 'PHONE_ERROR_PLACEHOLDER'| translate}}</p>
                 </div>
-                <!--ARE YOU INTERN -->
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="city"
+                    class="form-control"
+                    ng-model="form.city"
+                    id="city"
+                    placeholder="{{ 'CITY_PLACEHOLDER'| translate}}"
+                    required>
+                  <p ng-if="register.city.$invalid && register.$submitted && register.city.$untouched"
+                     class="help-block text-danger">{{ 'CITY_ERROR_PLACEHOLDER'| translate}}</p>
+                </div>
                 <div class="form-group">
                   <div class="form-control intern">
                     <span>{{ 'INTERN_PLACEHOLDER' | translate}}</span>
@@ -122,6 +130,10 @@
       <br/>
 
 
+      <p class="text-regist">
+        {{ 'PAY_OPTIONS_1_3' | translate }}
+        <br/>
+      </p>
       <p class="text-regist">
         {{ 'PAY_OPTIONS_3' | translate }}
         <br/>

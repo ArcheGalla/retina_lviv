@@ -15,10 +15,7 @@ app.use(cookieParser());
 // create reusable transporter object using SMTP transport
 var transporter = nodemailer.createTransport('SMTP', {
   service: "Gmail",
-  auth: {
-    user: "retinalviv@gmail.com",
-    pass: "REtinaLViv02"
-  }
+  auth: { user: "retinalviv@gmail.com", pass: "REtinaLViv02" }
 });
 
 app.post("/register", function (req, res) {
@@ -26,6 +23,7 @@ app.post("/register", function (req, res) {
     name: req.body.name || ' error name ',
     sname: req.body.sname || ' error sname ',
     phone: req.body.phone || ' error phone ',
+    city: req.body.city || ' error city ',
     email: req.body.email || ' error email ',
     message: req.body.message || ' empty message',
     intern: req.body.intern || "not selected"
@@ -41,6 +39,7 @@ app.post("/register", function (req, res) {
           ' /n ' + user.sname +
           ' /n ' + user.email +
           ' /n ' + user.phone +
+          ' /n ' + user.city +
           ' /n  is it Intern ?'+ user.intern +
           ' /n ' + user.message,
     html: 'Дані про нового учасника ' +
@@ -48,6 +47,7 @@ app.post("/register", function (req, res) {
     ' <br> ' + user.sname +
     ' <br> ' + user.email +
     ' <br> ' + user.phone +
+    ' <br> ' + user.city +
     ' <br/> is it Intern ? ' +  user.intern +
     ' <br/> '+ user.message
   };
@@ -57,7 +57,6 @@ app.post("/register", function (req, res) {
       res.status(401).send("bad");
       return console.log(error);
     }
-    //console.log('Message sent: ' + info.toString());
     res.status(200).send(info)
   });
 });
