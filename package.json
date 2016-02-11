@@ -49,17 +49,16 @@
     "serve-favicon": "~2.3.0",
     "uglify-save-license": "~0.4.1",
     "wiredep": "~2.2.2",
-    "wrench": "~1.5.8"
+    "wrench": "^1.5.8"
   },
   "bin": {
     "bower": "./node_modules/.bin/bower",
     "gulp": "./node_modules/.bin/gulp"
   },
   "scripts": {
-    "postinstall": "bower install",
-    "prestart": "gulp build",
+    "prestart": "bower install &&  gulp production",
     "main": "app.js",
-    "start": "node app.js"
+    "start": "PORT=80 node app.js"
   },
   "devDependencies": {},
   "engines": {

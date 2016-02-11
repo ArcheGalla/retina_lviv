@@ -11,10 +11,10 @@ wrench
     require('./gulp/' + file);
   });
 
-gulp.task("default", ["clean", "build"], function () {
-});
-
-gulp.task("build", ["clean", "build"], function () {
+//gulp.task("default", ["clean", "build"], function () {
+//});
+//
+gulp.task("production", ["clean", "build"], function () {
 	console.log("build is complate");
 });
 
