@@ -16,12 +16,11 @@ gulp.task('partials',function () {
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('public/dist'))
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
-      module: 'retinaLviv',
+      module: 'app',
       root: 'app'
     }))
     .pipe(gulp.dest(conf.paths.tmp + '/partials/'));
 });
-
 
 gulp.task('html', ['inject', 'partials'], function () {
   var partialsInjectFile = gulp.src(path.join(conf.paths.tmp, '/partials/templateCacheHtml.js'), { read: false });
@@ -79,21 +78,6 @@ gulp.task('other', function () {
     .pipe(fileFilter)
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')));
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 gulp.task('clean', function (done) {
   $.del([path.join(conf.paths.dist, '/**/*'), path.join(conf.paths.tmp, '/*')], done);
