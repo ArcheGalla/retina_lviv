@@ -4,11 +4,17 @@
   angular
     .module("app", ["ngMask", "pascalprecht.translate"])
     .controller("MainController", ["$scope", "$translate", "$window",
-      function ($scope, $translate) {
-        $scope.changeLanguage = function () {
-          $translate.use() === 'en' ? $translate.use('ua') : $translate.use('en');
-        };
-      }])
+        function ($scope, $translate) {
+
+          $scope.changeLanguage = function () {
+            $translate.use() === 'en' ? $translate.use('ua') : $translate.use('en');
+          };
+
+          $scope.currentLanguage = function (key) {
+            return $translate.use() === key;
+          };
+
+        }])
     .config(function ($translateProvider) {
       $translateProvider
         .translations('en', {

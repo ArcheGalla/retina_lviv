@@ -16,7 +16,32 @@
               <h4 class="subheading">{{ 'SESSION_TITLE_1' | translate }}</h4>
             </div>
             <div class="timeline-body">
-              <p class="text-muted">{{ 'SESSION_TEXT_1' | translate }}</p>
+              <p ng-if="currentLanguage('en')" class="text-muted">{{ 'SESSION_TEXT_1' | translate }}</p>
+
+              <p ng-if="currentLanguage('ua')">
+                <strong>Модератори: Г.В.Левицька, А.М.Сергієнко</strong>
+              </p>
+              <ol class="text-left" ng-if="currentLanguage('ua')">
+                <li>Стандартна процедура – епісклеральне пломбування.
+                  <strong>А.В.Дєдов</strong>
+                </li>
+                <li>Стандартна процедура – газ.
+                  <strong>О.О.Путієнко</strong>
+                </li>
+                <li>Ускладнені випадки. Вибір ендотампонади.
+                  <strong>А.С.Євтушенко</strong>
+                </li>
+                <li>Причини неудач? Попередження формування епіретинальних мембран.
+                 <strong>Г.В.Левицька</strong>
+                </li>
+                <li> Ускладнені випадки. Ретінотомія.
+                  <strong>І.Я.Новицький</strong>
+                </li>
+                <li>Central retinal detachment – causes,
+                  management – own results based on case series.
+                 <strong>A.Kudasiewicz-Kardaszewska, F.Kuhn, Z.Zagórski (Польща)</strong>
+                </li>
+              </ol>
             </div>
           </div>
         </li>
@@ -74,7 +99,13 @@
         </li>
         <li class="timeline-inverted">
           <div class="timeline-image">
-              <a class="page-scroll" href="#beSpeaker"><h4 class="text-muted">{{ 'SESSION_TITLE_5' | translate }}<br/>{{ 'SESSION_TEXT_5' | translate }}</h4></a>
+            <a class="page-scroll" href="#beSpeaker">
+              <h4 class="text-muted">
+                {{ 'SESSION_TITLE_5' | translate }}
+                <br/>
+                {{ 'SESSION_TEXT_5' | translate }}
+              </h4>
+            </a>
           </div>
         </li>
       </ul>
