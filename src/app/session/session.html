@@ -54,7 +54,17 @@
               <h4 class="subheading">{{ 'SESSION_TITLE_2' | translate }}</h4>
             </div>
             <div class="timeline-body">
-              <p class="text-muted">{{ 'SESSION_TEXT_2' | translate }}</p>
+              <p ng-if="currentLanguage('en')" class="text-muted">{{ 'SESSION_TEXT_2' | translate }}</p>
+
+              <p ng-if="currentLanguage('ua')"><strong>Модератори: З.Ф.Веселовська, О.О.Путієнко</strong></p>
+
+              <ol class="text-left" ng-if="currentLanguage('ua')">
+                <li>Покази до операції. Підготовка хворого до операції.<strong>М.М.Уманець</strong></li>
+                <li>Інтраопераційна профілактика премакулярних геморагій у хворих з проліферативною діабетичною ретінопатією.<strong>З.Ф.Веселовська</strong></li>
+                <li>Спосіб лікування рецидивуючого гемофтальма після вітректомії у пацієнтів з проліферативною діабетичною ретинопатією.<strong>Д.С.Горячев</strong></li>
+                <li>Макулярний набряк – покази для закритої вітректомії.<strong>З.А.Розанова</strong></li>
+                <li>Гідродинаміка ока при силіконовій тампонаді.<strong>В.В. Сергієнко, А.М. Сергієнко</strong></li>
+              </ol>
             </div>
           </div>
         </li>
@@ -64,10 +74,22 @@
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="subheading">{{ 'SESSION_TITLE_3' | translate }}</h4>
+              <h4 class="subheading" style="width: 105%;">{{ 'SESSION_TITLE_3' | translate }}</h4>
             </div>
             <div class="timeline-body">
-              <p class="text-muted">{{ 'SESSION_TEXT_3' | translate }}</p>
+              <p ng-if="currentLanguage('en')" class="text-muted">{{ 'SESSION_TEXT_3' | translate }}</p>
+
+              <p ng-if="currentLanguage('ua')"><strong>Модератори: А.М.Рубан, М.М.Уманець</strong></p>
+              <ol ng-if="currentLanguage('ua')" class="text-left">
+                <li>Макулярні дірки: стадії і покази до операції.<strong>А.М.Рубан</strong></li>
+                <li>Результати видалення внутрішньої пограничної мембрани з газовою тампонадою при лікуванні макулярних дірок.<strong>О.Ю.Плевачук</strong></li>
+                <li>Результати хірургії макулярних дірок з пластикою по Навроцькому.<strong>А.М.Сергієнко, А.А.Жупанова</strong></li>
+                <li>Використання інтраопераційної оптико-когерентної томографії при хірургії макулярної патології.<strong> Л.М.Литвинчук</strong></li>
+                <li>Техніка операції при довготривалих макулярних дірках.<strong>А.М.Рубан</strong></li>
+                <li>Macular Buckling for myopic tractional myopathy.<strong>Nikoloz Labauri</strong> (Грузія)</li>
+                <li>Ефективність видалення субретинальних крововиливів.<strong> Т.М.Смаль</strong></li>
+                <li>Вітректомія при ретинопатії недоношених в активну фазу: коли та навіщо.<strong> Ю.В.Барінов</strong></li>
+              </ol>
             </div>
           </div>
         </li>
@@ -94,30 +116,6 @@
                 <li>Аспекти вітреоретинальної хірургії при боєвих травмах органу зору (клінічний досвід).<strong>Д.В.Жмурик</strong></li>
               </ol>
             </div>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-image">
-            <img class="img-circle img-responsive" src="assets/images/about/1.jpg" alt="">
-          </div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="subheading">{{ 'SESSION_TITLE_6' | translate }}</h4>
-            </div>
-            <div class="timeline-body">
-              <p class="text-muted">{{ 'SESSION_TEXT_6' | translate }}</p>
-            </div>
-          </div>
-        </li>
-        <li class="timeline-inverted">
-          <div class="timeline-image">
-            <a class="page-scroll" href="#beSpeaker">
-              <h4 class="text-muted">
-                {{ 'SESSION_TITLE_5' | translate }}
-                <br/>
-                {{ 'SESSION_TEXT_5' | translate }}
-              </h4>
-            </a>
           </div>
         </li>
       </ul>
