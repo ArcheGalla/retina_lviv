@@ -80,7 +80,19 @@
               <h4 class="subheading">{{ 'SESSION_TITLE_4' | translate }}</h4>
             </div>
             <div class="timeline-body">
-              <p class="text-muted">{{ 'SESSION_TEXT_4' | translate }}</p>
+              <p ng-if="currentLanguage('en')" class="text-muted">{{ 'SESSION_TEXT_4' | translate }}</p>
+
+              <p ng-if="currentLanguage('ua')"><strong>Модератори: І.Я.Новицький, О.С.Петрецька</strong></p>
+              <ol ng-if="currentLanguage('ua')" class="text-left">
+                <li>Стороннє тіло – покази до трансвітреального видалення.<strong> О.С.Сідак-Петрецька</strong></li>
+                <li>Субретинальні внутрішньоочні сторонні тіла.<strong> К.Д.Ісько </strong></li>
+                <li>Ефективність методу інтрасклеральної фіксації ІОЛ при комбінованих операціях з приводу люксації кришталика.
+                  <strong>Л.М.Литвинчук</strong>
+                </li>
+                <li>Коли пошкоджено все. Все і зразу?<strong>О.С.Сідак-Петрецька</strong></li>
+                <li>Ендофтальміт. Еефективність трансціліарної вітректомії при травматичних ендофтальмітах.<strong>Н.П.Грубник</strong></li>
+                <li>Аспекти вітреоретинальної хірургії при боєвих травмах органу зору (клінічний досвід).<strong>Д.В.Жмурик</strong></li>
+              </ol>
             </div>
           </div>
         </li>
