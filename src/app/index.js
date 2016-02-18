@@ -118,7 +118,7 @@
           PARTNER_LINK_4: 'Click to visit WWWWWW web site',
           YES: 'Yes',
           No: 'No ',
-          REGISTER_COMPLETE:'Registration is close'
+          REGISTER_COMPLETE:'Registration is closed. Sorry, no free places'
         })
         .translations('ua', {
           REGISTER_COMPLETE:'Реєстрація закрита.  Вибачте, вільних місць для участі не залишилось',
