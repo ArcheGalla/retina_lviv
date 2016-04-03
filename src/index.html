@@ -83,15 +83,15 @@
 <!---------------------------------------------------------------------------------------------->
 <!-- Header -->
 <!---------------------------------------------------------------------------------------------->
-<header>
+<header ng-cloak>
   <div class="container">
     <div class="intro-text">
       <div class="intro-heading text-shadow">Retina Lviv 2016</div>
       <div class="intro-lead-in text-shadow">
         {{ 'MAIN_DESCRIPTION' | translate }}
         </div>
-      <a href="#registration" class="page-scroll btn btn-xl">
-        {{ 'BTN_REGISTRATION' | translate }}</a>
+      <!--<a href="#registration" class="page-scroll btn btn-xl">-->
+        <!--{{ 'BTN_REGISTRATION' | translate }}</a>-->
     </div>
   </div>
 </header>
@@ -101,7 +101,7 @@
 <div id="about"></div>
 </section>
 
-<countdown></countdown>
+<!--<countdown></countdown>-->
 <div id="roadmap">
   <road-map></road-map>
 </div>
@@ -122,7 +122,7 @@
 <!---------------------------------------------------------------------------------------------------->
 <!--                                    Partners                                                    -->
 <!---------------------------------------------------------------------------------------------------->
-<div id="partners">
+<div id="partners" style="max-width: 100vw;">
   <partners></partners>
 </div>
 

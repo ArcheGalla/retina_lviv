@@ -118,10 +118,10 @@
           PARTNER_LINK_4: 'Click to visit WWWWWW web site',
           YES: 'Yes',
           No: 'No ',
-          REGISTER_COMPLETE:'Registration is closed. Sorry, no free places'
+          REGISTER_COMPLETE:'Registration is closed.'
         })
         .translations('ua', {
-          REGISTER_COMPLETE:'Реєстрація закрита.  Вибачте, вільних місць для участі не залишилось',
+          REGISTER_COMPLETE:'Реєстрація закрита',
           PARTNER_LINK_1: 'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
           PARTNER_LINK_2: 'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
           PARTNER_LINK_3: 'Натисніть щоб відвідати інтернет сторінку медичного центру Oculus',
