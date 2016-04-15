@@ -14,6 +14,10 @@
             return $translate.use() === key;
           };
 
+
+          $scope.photo_report = "https://docs.google.com/uc?export=download&confirm=tu7b&id=0B1MEwd5JlqH6MV9ha3lHNDhqVU0";
+          $scope.video_report = "http://www.ex.ua/504747746261";
+
         }])
     .config(function ($translateProvider) {
       $translateProvider
@@ -112,6 +116,8 @@
           ORG_NAME_VOLKOVA: 'Eugenia Volkova',
           ORG_NAME_SMETANA: 'Vira Vavilova',
           FOOTER_ORG: 'Organizers',
+          BTN_RESULT_PHOTO: 'Photo Report',
+          BTN_RESULT_VIDEO: 'Video Report',
           PARTNER_LINK_1: 'Click to visit Oculus web site',
           PARTNER_LINK_2: 'Click to visit WWWWWW web site',
           PARTNER_LINK_3: 'Click to visit WWWWWW web site',
@@ -134,6 +140,8 @@
           NAV_CONTACTS: 'контакти',
           MAIN_DESCRIPTION: 'Всеукраїнський симпозіум офтальмологів',
           BTN_REGISTRATION: 'Реєстрація',
+          BTN_RESULT_PHOTO: 'Фотозвіт',
+          BTN_RESULT_VIDEO: 'Відеозвіт',
           DEAR_COLLEAGUES: 'Шановні колеги!',
           INTRO_TEXT_1: 'Щиро запрошую Вас прийняти участь у симпозіумі «Ретіна-Львів 2016», присвяченому другій річниці створення Медичного Центру «Oculus»! Зустріч відбудеться у місті Львові 2 квітня 2016 року.',
           INTRO_TEXT_2: 'Метою симпозіуму є пошук та вироблення спільних поглядів на стандартизацію вітреоретинальних операцій. Форма конференції передбачає широке обговорення питань, внесених у програму, як між доповідачами, так і з аудиторією.',
