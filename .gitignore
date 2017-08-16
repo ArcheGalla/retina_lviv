@@ -7,3 +7,4 @@ public/dist/
 .tmp/
 dist/
 /npm-debug.log
+/client/.dist/

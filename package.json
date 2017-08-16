@@ -1,6 +1,6 @@
 {
   "name": "retinaLviv",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "body-parser": "~1.13.2",
     "bower": "^1.7.1",
@@ -51,17 +51,12 @@
     "wiredep": "~2.2.2",
     "wrench": "~1.5.8"
   },
-  "bin": {
-    "bower": "./node_modules/.bin/bower",
-    "gulp": "./node_modules/.bin/gulp"
-  },
   "scripts": {
-    "prestart": "bower install &&  gulp build_production",
-    "main": "app.js",
-    "start": "gulp start"
-  },
-  "devDependencies": {},
-  "engines": {
-    "node": ">=0.10.0"
+    "install": "npm install; bower install",
+    "clean": "rm -rf node_modules; rm -rf bower_components; rm -rf .tmp",
+    "build": "gulp build_production",
+    "start:server": "node app.js",
+    "start": "export NODE_ENV=development; gulp start",
+    "watch": "export NODE_ENV=development; gulp watch"
   }
 }

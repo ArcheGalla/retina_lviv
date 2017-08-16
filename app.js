@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 
 var app = express();
-var port = 80;
+var port = process.env.NODE_ENV === 'development' ? 3000 : 80;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -57,8 +57,8 @@ app.post("/register", function (req, res) {
       res.status(401).send("bad");
       return console.log(error);
     }
-    res.status(200).send(info)
+    res.status(200).send(info);
   });
 });
-app.use('/', express.static(__dirname + '/public/dist/'));
+app.use('/', express.static(__dirname + '/client/.dist/'));
 app.listen(port, function () { console.log(" Magic happen on " + port ); });
