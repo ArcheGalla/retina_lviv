@@ -14,7 +14,7 @@ gulp.task('partials',function () {
     path.join(conf.paths.tmp, '/serve/app/**/*.html')
   ])
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('public/dist'))
+    .pipe(gulp.dest('client/.dist'))
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
       module: 'app',
       root: 'app'

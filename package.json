@@ -51,8 +51,12 @@
     "wiredep": "~2.2.2",
     "wrench": "~1.5.8"
   },
+  "bin": {
+    "bower": "node_modules/.bin/bower",
+    "gulp": "node_modules/.bin/gulp"
+  },
   "scripts": {
-    "install": "npm install; bower install",
+    "install": "npm install --no-shrinkwrap; bower install",
     "clean": "rm -rf node_modules; rm -rf bower_components; rm -rf .tmp",
     "build": "gulp build_production",
     "start:server": "node app.js",
