@@ -1,10 +1,1 @@
-node_modules/
-bower_components/
-/sample
-.sass-cache/
-public/dist/
-.idea/
-.tmp/
-dist/
-/npm-debug.log
-/client/.dist/
+package-lock.json
