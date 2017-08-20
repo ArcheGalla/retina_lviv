@@ -1,25 +1,25 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var nodemailer = require('nodemailer');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 
-var app = express();
-var port = process.env.NODE_ENV === 'development' ? 3000 : 80;
+const app = express();
+const port = process.env.NODE_ENV === 'development' ? 3000 : 80;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
 // create reusable transporter object using SMTP transport
-var transporter = nodemailer.createTransport('SMTP', {
+const transporter = nodemailer.createTransport('SMTP', {
   service: "Gmail",
   auth: { user: "retinalviv@gmail.com", pass: "REtinaLViv02" }
 });
 
 app.post("/register", function (req, res) {
-  var user = {
+  const user = {
     name: req.body.name || ' error name ',
     sname: req.body.sname || ' error sname ',
     phone: req.body.phone || ' error phone ',
@@ -30,7 +30,7 @@ app.post("/register", function (req, res) {
   };
 
 // setup e-mail data with unicode symbols
-  var mailOptions = {
+  const mailOptions = {
     from: 'New User <retinalviv@gmail.com>',
     to: "retinalviv@gmail.com, evgeniya.volkova1911@gmail.com",
     subject: 'meeting member',
