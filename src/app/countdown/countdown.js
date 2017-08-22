@@ -5,7 +5,7 @@ angular.module("app").directive("countdown", function () {
     templateUrl: "app/countdown/countdown.html",
     link: function ($scope, element, attrs) {
 
-      var end = Math.floor((new Date("04/27/2018")).getTime() / 1000);
+      var end = Math.floor((new Date("05/4/2018")).getTime() / 1000);
       var start = Math.floor((new Date("1/7/2017")).getTime() / 1000);
       var now = Math.floor((new Date).getTime() / 1000);
 
