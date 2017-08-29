@@ -60,6 +60,7 @@
     "clean": "rm -rf node_modules; rm -rf bower_components; rm -rf .tmp",
     "build": "gulp build_production",
     "start:server": "node app.js",
+    "gulp:server": "gulp serve",
     "start": "export NODE_ENV=development; gulp serve",
     "watch": "export NODE_ENV=development; gulp watch"
   }
