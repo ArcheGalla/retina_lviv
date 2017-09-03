@@ -56,7 +56,7 @@
     "gulp": "node_modules/.bin/gulp"
   },
   "scripts": {
-    "dependecy": "npm install --no-shrinkwrap; bower install",
+    "dependecy": "bower install",
     "clean": "rm -rf node_modules; rm -rf bower_components; rm -rf .tmp",
     "build": "gulp build_production",
     "start:server": "node app.js",

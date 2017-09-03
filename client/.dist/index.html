@@ -1,84 +1,4 @@
-<!doctype html>
-<html ng-app="app">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Retina Lviv</title>
-  <meta name="description" content="retina lviv oculus">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description"
-        content="«РЕТІНА-ЛЬВІВ 2018» – симпозіум, присвячений пошуку та виробленню спільних поглядів на стандартизацію вітрео-ретинальних операцій. 2 Квітня 2016 року, місто Львів, Україна.">
-  <meta name="keywords" content="Ретіна Львів, конференція Ретіна Львів, симпозіум Ретіна Львів">
-  <meta name="keywords" content="Retina Lviv, Conference Retina Lviv, Symposium Retina Lviv">
-  <meta name="author" content="Retina Lviv">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <link rel="stylesheet" href="styles/vendor-701a716398.css">
-  <link rel="stylesheet" href="styles/app-a023e43a5f.css"><!-- Custom CSS --><!-- Custom Fonts -->
-</head>
-<body id="page-top" class="index scrollme page-scroll" ng-controller="MainController">
-<!---------------------------------------------------------------------------------------------->
-<!-- Navigation -->
-<!---------------------------------------------------------------------------------------------->
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container"><!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1"><span
-        class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
-        class="icon-bar"></span> <span class="icon-bar"></span></button>
-      <a href="#page-top" animate><img src="assets/images/retina/logo.png"
-                                       alt="retina lviv logo"></a></div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="hidden"><a href="#page-top"></a></li>
-        <li><a class="page-scroll text-bold" href="#about">{{ 'NAV_ABOUT' | translate }}</a></li>
-        <!--<li>-->
-        <!--<a class="page-scroll" href="#schedule">{{ 'NAV_SCHEDULE' | translate }}</a>-->
-        <!--</li>--><!--<li>-->
-        <!--<a class="page-scroll" href="#registration">{{ 'NAV_REGISTRATION' | translate }}</a>-->
-        <!--</li>-->
-        <li><a class="page-scroll" href="#partners">{{ 'NAV_PARTNERS' | translate }}</a></li>
-        <li><a class="page-scroll" href="#contact">{{ 'NAV_CONTACTS' | translate }}</a></li>
-        <li><a class="text-right lang" ng-click="changeLanguage()">{{ 'CHOOSE_LANG' | translate
-          }}</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav>
-<!---------------------------------------------------------------------------------------------->
-<!-- Header -->
-<!---------------------------------------------------------------------------------------------->
-<header ng-cloak>
-  <div class="container">
-    <div class="intro-text">
-      <div class="intro-heading text-shadow">Lviv 2018</div>
-      <div class="intro-lead-in text-shadow">{{ 'MAIN_DESCRIPTION' | translate }}</div>
-      <div class="intro-lead-old text-shadow">{{ 'MAIN_DESCRIPTION_PREVIOUS' | translate }}</div>
-      <br><br><a ng-href="{{ photo_report }}" target="_blank" class="page-scroll btn btn-xl"
-                 style="margin-right: 25px">{{ 'BTN_RESULT_PHOTO' | translate }}</a> <a
-      ng-href="{{ video_report }}" target="_blank" class="page-scroll btn btn-xl"
-      style="margin-right: 25px">{{ 'BTN_RESULT_VIDEO' | translate }}</a> <a
-      ng-href="{{ video_record }}" target="_blank" class="page-scroll btn btn-xl">{{
-      'BTN_RESULT_RECORD' | translate }}</a></div>
-  </div>
-</header>
-<section>
-  <introduction></introduction>
-  <div id="about"></div>
-</section>
-<countdown></countdown><!--<div id="roadmap">--><!--<road-map></road-map>--><!--</div>-->
-<section id="session">
-  <session></session>
-</section><!--<section id="schedule" class="bg-light-gray">--><!--<schedule></schedule>-->
-<!--</section>-->
-<div id="partners" style="max-width: 100vw">
-  <partners></partners>
-</div><!--<section id="registration">--><!--<registration></registration>--><!--</section>-->
-<div id="contact">
-  <location></location>
-</div>
-<script src="scripts/vendor-57421cd351.js"></script>
-<script src="scripts/app-8de7ebb092.js"></script><!-- Google Tag Manager -->
-<script>(function (w, d, s, l, i) {
+<!doctype html><html ng-app="app"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Retina Lviv</title><meta name="description" content="retina lviv oculus"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="«РЕТІНА-ЛЬВІВ 2018» – симпозіум, присвячений пошуку та виробленню спільних поглядів на стандартизацію вітрео-ретинальних операцій. 2 Квітня 2016 року, місто Львів, Україна."><meta name="keywords" content="Ретіна Львів, конференція Ретіна Львів, симпозіум Ретіна Львів"><meta name="keywords" content="Retina Lviv, Conference Retina Lviv, Symposium Retina Lviv"><meta name="author" content="Retina Lviv"><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel="stylesheet" href="styles/vendor-701a716398.css"><link rel="stylesheet" href="styles/app-5e38d82a6e.css"><!-- Custom CSS --><!-- Custom Fonts --></head><body id="page-top" class="index scrollme page-scroll" ng-controller="MainController"><nav class="navbar navbar-default navbar-fixed-top"><div class="container"><!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header page-scroll"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a href="#page-top" animate><img src="assets/images/retina/logo.png" alt="retina lviv logo"></a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav navbar-right"><li class="hidden"><a href="#page-top"></a></li><li><a class="page-scroll text-bold" href="#about">{{ 'NAV_ABOUT' | translate }}</a></li><!--<li>--><!--<a class="page-scroll" href="#schedule">{{ 'NAV_SCHEDULE' | translate }}</a>--><!--</li>--><!--<li>--><!--<a class="page-scroll" href="#registration">{{ 'NAV_REGISTRATION' | translate }}</a>--><!--</li>--><li><a class="page-scroll" href="#partners">{{ 'NAV_PARTNERS' | translate }}</a></li><li><a class="page-scroll" href="#contact">{{ 'NAV_CONTACTS' | translate }}</a></li><li><a class="text-right lang" ng-click="changeLanguage()">{{ 'CHOOSE_LANG' | translate }}</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><header ng-cloak><div class="container"><div class="intro-text"><div class="intro-heading text-shadow">Retina Lviv 2018</div><div class="intro-lead-in text-shadow">{{ 'MAIN_DESCRIPTION' | translate }}</div><div class="intro-lead-old text-shadow">{{ 'MAIN_DESCRIPTION_PREVIOUS' | translate }}</div><br><br><a ng-href="{{ photo_report }}" target="_blank" class="page-scroll btn btn-xl" style="margin-right: 25px">{{ 'BTN_RESULT_PHOTO' | translate }}</a> <a ng-href="{{ video_report }}" target="_blank" class="page-scroll btn btn-xl" style="margin-right: 25px">{{ 'BTN_RESULT_VIDEO' | translate }}</a> <a ng-href="{{ video_record }}" target="_blank" class="page-scroll btn btn-xl">{{ 'BTN_RESULT_RECORD' | translate }}</a></div></div></header><section><introduction></introduction><div id="about"></div></section><countdown></countdown><!--<div id="roadmap">--><!--<road-map></road-map>--><!--</div>--><!--<section id="session">--><!--<session></session>--><!--</section>--><!--<section id="schedule" class="bg-light-gray">--><!--<schedule></schedule>--><!--</section>--><div id="partners" style="max-width: 100vw"><partners></partners></div><!--<section id="registration">--><!--<registration></registration>--><!--</section>--><div id="contact"><location></location></div><script src="scripts/vendor-57421cd351.js"></script><script src="scripts/app-e56b0bfdce.js"></script><!-- Google Tag Manager --><script>(function (w, d, s, l, i) {
   w[l] = w[l] || [];
   w[l].push({
     'gtm.start': new Date().getTime(), event: 'gtm.js'
@@ -89,6 +9,4 @@
   j.src =
     '//www.googletagmanager.com/gtm.js?id=' + i + dl;
   f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-TZTVGP');</script><!-- End Google Tag Manager -->
-</body>
-</html>
+})(window, document, 'script', 'dataLayer', 'GTM-TZTVGP');</script><!-- End Google Tag Manager --></body></html>
