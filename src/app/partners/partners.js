@@ -11,7 +11,7 @@ angular
       $(element).carouFredSel({
         items: 4,
         width: '100%',
-        height: 375,
+        height: 240,
         direction: "left",
         transition: true,
         scroll: {
