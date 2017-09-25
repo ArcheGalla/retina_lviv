@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.NODE_ENV === 'development' ? 3000 : 80;
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // create reusable transporter object using SMTP transport
@@ -35,21 +35,21 @@ app.post("/register", function (req, res) {
     to: "retinalviv@gmail.com, evgeniya.volkova1911@gmail.com",
     subject: 'meeting member',
     text: 'Дані про нового учасника ' +
-          ' /n ' +  user.name +
-          ' /n ' + user.sname +
-          ' /n ' + user.email +
-          ' /n ' + user.phone +
-          ' /n ' + user.city +
-          ' /n  is it Intern ?'+ user.intern +
-          ' /n ' + user.message,
+    ' /n ' + user.name +
+    ' /n ' + user.sname +
+    ' /n ' + user.email +
+    ' /n ' + user.phone +
+    ' /n ' + user.city +
+    ' /n  is it Intern ?' + user.intern +
+    ' /n ' + user.message,
     html: 'Дані про нового учасника ' +
-    ' <br> ' +  user.name +
+    ' <br> ' + user.name +
     ' <br> ' + user.sname +
     ' <br> ' + user.email +
     ' <br> ' + user.phone +
     ' <br> ' + user.city +
-    ' <br/> is it Intern ? ' +  user.intern +
-    ' <br/> '+ user.message
+    ' <br/> is it Intern ? ' + user.intern +
+    ' <br/> ' + user.message
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
@@ -60,5 +60,16 @@ app.post("/register", function (req, res) {
     res.status(200).send(info);
   });
 });
+app.post('/v1/topic', function (req, res) {
+  console.log('#########################################');
+  console.log('req ', req.body);
+
+  console.log('#########################################');
+
+  res.json({ ok: 'ok' }).status(200);
+});
+
 app.use('/', express.static(__dirname + '/client/.dist/'));
-app.listen(port, function () { console.log(" Magic happen on " + port ); });
+app.listen(port, function () {
+  console.log(" Magic happen on " + port);
+});
