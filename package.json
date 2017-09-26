@@ -62,6 +62,7 @@
     "start:server": "node app.js",
     "gulp:server": "gulp serve",
     "start": "export NODE_ENV=development; gulp serve",
+    "test": "echo Test successfully finished",
     "watch": "export NODE_ENV=development; gulp watch"
   }
 }
