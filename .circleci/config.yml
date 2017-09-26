@@ -34,4 +34,7 @@ jobs:
       # run tests!
       - run: npm run test
 
+      # build step
+      - run: npm run build
+
 
