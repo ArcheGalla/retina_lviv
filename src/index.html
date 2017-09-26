@@ -6,7 +6,8 @@
   <title>Retina Lviv</title>
   <meta name="description" content="retina lviv oculus">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="«РЕТІНА-ЛЬВІВ 2018» – симпозіум, присвячений пошуку та виробленню спільних поглядів на стандартизацію вітрео-ретинальних операцій. 2 Квітня 2016 року, місто Львів, Україна.">
+  <meta name="description"
+        content="«РЕТІНА-ЛЬВІВ 2018» – симпозіум, присвячений пошуку та виробленню спільних поглядів на стандартизацію вітрео-ретинальних операцій. 2 Квітня 2016 року, місто Львів, Україна.">
   <meta name="keywords" content="Ретіна Львів, конференція Ретіна Львів, симпозіум Ретіна Львів">
   <meta name="keywords" content="Retina Lviv, Conference Retina Lviv, Symposium Retina Lviv">
   <meta name="author" content="Retina Lviv">
@@ -57,10 +58,10 @@
           <a class="page-scroll text-bold" href="#about">{{ 'NAV_ABOUT' | translate }}</a>
         </li>
         <!--<li>-->
-          <!--<a class="page-scroll" href="#schedule">{{ 'NAV_SCHEDULE' | translate }}</a>-->
+        <!--<a class="page-scroll" href="#schedule">{{ 'NAV_SCHEDULE' | translate }}</a>-->
         <!--</li>-->
         <!--<li>-->
-          <!--<a class="page-scroll" href="#registration">{{ 'NAV_REGISTRATION' | translate }}</a>-->
+        <!--<a class="page-scroll" href="#registration">{{ 'NAV_REGISTRATION' | translate }}</a>-->
         <!--</li>-->
         <li>
           <a class="page-scroll" href="#partners">{{ 'NAV_PARTNERS' | translate }}</a>
@@ -86,9 +87,12 @@
       <div class="intro-lead-old text-shadow">{{ 'MAIN_DESCRIPTION_PREVIOUS' | translate }}</div>
       <br>
       <br>
-      <a ng-href="{{ photo_report }}" target="_blank" class="page-scroll btn btn-xl" style="margin-right: 25px;">{{ 'BTN_RESULT_PHOTO' | translate }}</a>
-      <a ng-href="{{ video_report }}" target="_blank" class="page-scroll btn btn-xl" style="margin-right: 25px;">{{ 'BTN_RESULT_VIDEO' | translate }}</a>
-      <a ng-href="{{ video_record }}" target="_blank" class="page-scroll btn btn-xl">{{ 'BTN_RESULT_RECORD' | translate }}</a>
+      <a ng-href="{{ photo_report }}" target="_blank" class="page-scroll btn btn-xl"
+         style="margin-right: 25px;">{{ 'BTN_RESULT_PHOTO' | translate }}</a>
+      <a ng-href="{{ video_report }}" target="_blank" class="page-scroll btn btn-xl"
+         style="margin-right: 25px;">{{ 'BTN_RESULT_VIDEO' | translate }}</a>
+      <a ng-href="{{ video_record }}" target="_blank" class="page-scroll btn btn-xl">{{
+        'BTN_RESULT_RECORD' | translate }}</a>
     </div>
   </div>
 </header>
@@ -101,22 +105,23 @@
 <countdown></countdown>
 
 <!--<div id="roadmap">-->
-  <!--<road-map></road-map>-->
+<!--<road-map></road-map>-->
 <!--</div>-->
 
 <!--<section id="session">-->
-  <!--<session></session>-->
+<!--<session></session>-->
 <!--</section>-->
 
 <!--<section id="schedule" class="bg-light-gray">-->
-  <!--<schedule></schedule>-->
+<!--<schedule></schedule>-->
 <!--</section>-->
-
-<div class="container tezy" ng-controller="TezyController as tezy">
+<br>
+<br>
+<div ng-if="isLang('ua')" class="container tezy" ng-controller="TezyController as tezy">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
       <h1 class="section-heading">{{ 'ПОДАННЯ ТЕЗ' | translate }}</h1>
-      <h4>Кінцевий термін подання тез 31 січня 2017 року.</h4>
+      <h4>Кінцевий термін подання тез: 31 січня 2017 року.</h4>
       <br>
     </div>
   </div>
@@ -189,13 +194,95 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-9 col-lg-offset-1 col-lg-9">
       <button class="btn btn-primary btn-lg pull-right tyzy-submit-btn"
-              ng-click="tezy.openTezyModal()">Відправити
+              ng-click="tezy.openTezyModal()">Незабаром ...
       </button>
     </div>
   </div>
   <br>
   <br>
+</div>
 
+<div ng-if="isLang('en')" class="container tezy" ng-controller="TezyController as tezy">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+      <h1 class="section-heading">{{ 'ABSTRACT SUBMISSION' | translate }}</h1>
+      <h4>Submission Deadline: 31 january 2018</h4>
+      <br>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class=" col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10 text-left">
+      <h4 class="list-titles">TERMS AND CONDITIONS</h4>
+      <ul class="tezy-text">
+        <li>All submissions must be made online by the deadline, 31 January 2018.</li>
+        <li>Submissions by post, email, fax or any other means will NOT be accepted.</li>
+        <li>Once you have submitted your abstract you will be sent an email summary. Check this to
+          make sure all information is correct. The organizers will not accept any responsibility
+          for abstracts that have not been submitted properly.
+        </li>
+        <li> All abstracts will initially be reviewed, graded and accepted or rejected by the
+          Programme Committee.
+        </li>
+        <li>The Committee reserves the right to determine whether a free paper submission is
+          accepted. The decision of the Committee is final.
+        </li>
+        <li>If an abstract is accepted the named presenter must be a registered delegate at the
+          Meeting and give the presentation.
+        </li>
+      </ul>
+      <br>
+      <br>
+      <h4 class="list-titles">ABSTRACT FORMAT</h4>
+      <p class="tezy-text">All submitted abstracts must be in Ukrainian or English and follow the
+        structured format below:</p>
+      <ul class="tezy-text">
+        <li>Title, Setting, Purpose, Methods, Results, Conclusions, Financial Disclosure of all
+          authors
+        </li>
+
+        <li>Volume of abstract is max two pages</li>
+
+        <li>When using abbreviations for the first time, care should be taken to spell them out in
+          full with the abbreviation in parentheses after the full word/s the first time it appears
+          in the text.
+        </li>
+      </ul>
+
+      <br>
+      <br>
+
+      <h4 class="list-titles">COMPLEX CASES PRESENTATIONS</h4>
+      <ul class="tezy-text">
+        <li>Only one case report per presentation is permitted</li>
+        <li>Authors must present their case on a maximum of 5 PowerPoint slides. Each accepted case
+          will be allocated 6 minutes (3 minutes for presentation and 3 minutes discussion).
+        </li>
+        <li>There will be an award for the best case presentation.</li>
+      </ul>
+
+      <br>
+      <br>
+
+      <h4 class="list-titles">NUMBER OF SUBMISSIONS</h4>
+      <ul class="tezy-text">
+        <li>Each author may submit a maximum of two Free Papers and one Complex cases presentation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-9 col-lg-offset-1 col-lg-9">
+      <button class="btn btn-primary btn-lg pull-right tyzy-submit-btn"
+              ng-click="tezy.openTezyModal()">Available soon ...
+      </button>
+    </div>
+  </div>
+  <br>
+  <br>
 </div>
 
 <!--<div id="partners" style="max-width: 100vw;">-->
@@ -203,7 +290,7 @@
 <!--</div>-->
 
 <!--<section id="registration">-->
-  <!--<registration></registration>-->
+<!--<registration></registration>-->
 <!--</section>-->
 
 <div id="contact">
