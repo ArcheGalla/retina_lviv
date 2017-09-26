@@ -25,6 +25,7 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
+      - run: node_modules/.bin/bower install;
 
       - save_cache:
           paths:
