@@ -60,16 +60,13 @@ app.post("/register", function (req, res) {
     res.status(200).send(info);
   });
 });
+
 app.post('/v1/topic', function (req, res) {
-  console.log('#########################################');
   console.log('req ', req.body);
-
-  console.log('#########################################');
-
   res.json({ ok: 'ok' }).status(200);
 });
 
 app.use('/', express.static(__dirname + '/client/.dist/'));
-app.listen(port, function () {
-  console.log(" Magic happen on " + port);
-});
+
+
+app.listen(port, () => console.log(" Magic happen on " + port));
