@@ -37,7 +37,6 @@ angular
         })
         .catch(function (err) {
           console.log('err ', err);
-
         })
     }
   }])
@@ -48,8 +47,10 @@ angular
 
       ModalService
         .showModal({
-          templateUrl: 'app/tezy/tezy.html',
-          controller: "TezyModalController"
+          //templateUrl: 'app/tezy/tezy.html',
+          template: '<div>Hello from modal</div>',
+          controller: "TezyModalController",
+          // appendElement: document.querySelector('div')
         })
         .then(function (modal) {
           console.log('then ');
