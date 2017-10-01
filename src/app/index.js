@@ -42,22 +42,23 @@ angular
     }
   }])
   .controller('TezyController', ['$scope', 'ModalService', function ($scope, ModalService) {
-    console.log('hello from new controller');
 
-    this.openTezyModal = function () {
+    $scope.openTezyModal = function () {
+      console.log('Open method ');
+
       ModalService
         .showModal({
-          template: '',
+          templateUrl: 'app/tezy/tezy.html',
           controller: "TezyModalController"
         })
         .then(function (modal) {
-          modal.element.modal();
-          modal.close.then(function (result) {
-
-          });
+          console.log('then ');
+          //modal.element.modal();
+          //modal.close.then(function (result) {
+          //
+          //});
         });
     }
-
   }])
   .config(function ($translateProvider) {
     $translateProvider

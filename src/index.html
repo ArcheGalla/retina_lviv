@@ -117,7 +117,7 @@
 <!--</section>-->
 <br>
 <br>
-<div ng-if="isLang('ua')" class="container tezy" ng-controller="TezyController as tezy">
+<div ng-if="isLang('ua')" class="container tezy" ng-controller="TezyController">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
       <h1 class="section-heading">{{ 'ПОДАННЯ ТЕЗ' | translate }}</h1>
@@ -194,7 +194,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-9 col-lg-offset-1 col-lg-9">
       <button class="btn btn-primary btn-lg pull-right tyzy-submit-btn"
-              ng-click="tezy.openTezyModal()">Незабаром ...
+              ng-click="openTezyModal()">Незабаром ...
       </button>
     </div>
   </div>
@@ -202,7 +202,7 @@
   <br>
 </div>
 
-<div ng-if="isLang('en')" class="container tezy" ng-controller="TezyController as tezy">
+<div ng-if="isLang('en')" class="container tezy" ng-controller="TezyController">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
       <h1 class="section-heading">{{ 'ABSTRACT SUBMISSION' | translate }}</h1>
@@ -277,7 +277,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-9 col-lg-offset-1 col-lg-9">
       <button class="btn btn-primary btn-lg pull-right tyzy-submit-btn"
-              ng-click="tezy.openTezyModal()">Available soon ...
+              ng-click="openTezyModal()">Available soon ...
       </button>
     </div>
   </div>
